@@ -1,0 +1,11 @@
+---
+export interface Props {
+    tags: Array<string>
+}
+const { tags } = Astro.props as Props;
+---
+
+<ul class="tags-styling flex ml-auto mb-8">
+    {tags.map((tag) => <li class="mr-2 text-white inline-block dark:text-white text-xs p-1 px-3 rounded-sm w-auto bg-[#d82456]">{tag}</li>)}
+</ul>
+<!-- /.tags-styling -->
