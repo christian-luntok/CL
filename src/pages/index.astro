@@ -1,53 +1,43 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+<Layout title="Christian Luntok.">
+	<main id="main">
+		<section class="main-wrapper">
+			<h1 class="text-center name-title">Christian Luntok</h1>
+			<ul class="introduction-list my-3 flex flex-wrap text-center justify-center w-100 content-center">
+				<li>Design.</li>
+				<li>Create.</li>
+				<li>Develop.</li>
+			</ul>
+		</section>
+		<!-- /.main-wrapper -->
 	</main>
 </Layout>
 
-<style>
+<style lang="scss">
+	@import '../styles/reset.scss';
+	@import '../styles/mixin.scss';
 	:root {
 		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
 	}
 
 	h1 {
 		margin: 2rem 0;
+		&.name-title {
+			font-size:rem(24);
+		}
 	}
 
 	main {
 		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
+		padding: 0 15px;
+		max-width: rem(900);
+	}
+
+	.main-wrapper {
+		padding: rem(100) 0;
 	}
 
 	.text-gradient {
@@ -68,6 +58,21 @@ import Card from '../components/Card.astro';
 		}
 		50% {
 			background-position-y: 80%;
+		}
+	}
+
+	.introduction-list {
+		font-family:var(--font-main);
+		font-weight:700;
+		li {
+			font-size:rem(72);
+			display:block;
+			@screen md {
+				font-size: rem(96);
+				&:not(first-child) {
+				margin-left:rem(32);
+				}
+			}
 		}
 	}
 

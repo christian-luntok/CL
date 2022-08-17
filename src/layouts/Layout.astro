@@ -1,4 +1,6 @@
 ---
+import '../styles/reset.scss';
+import '../styles/mixin.scss';
 export interface Props {
 	title: string;
 }
@@ -14,31 +16,47 @@ const { title } = Astro.props as Props;
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="stylesheet" href="https://use.typekit.net/szo7kfv.css">
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
-<style>
+<style lang="scss" is:global>
+	@import '../styles/reset.scss';
+	@import '../styles/mixin.scss';
 	:root {
 		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
 		--font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
-
-		--color-text: hsl(12, 5%, 4%);
+		--font-main: freight-display-pro, serif;
+		--bg-primary: rgb(255, 255, 255);
+		--color-text: #28292A;
 		--color-bg: hsl(10, 21%, 95%);
 		--color-border: hsl(17, 24%, 90%);
 	}
 
+	/* 
+	// Start adding styling
+	*/
 	html {
 		font-family: system-ui, sans-serif;
 		font-size: var(--font-size-base);
 		color: var(--color-text);
-		background-color: var(--color-bg);
+		background-color: var(--bg-primary);
 	}
 
 	body {
 		margin: 0;
+		background-image: url(../img/noise-bg.png);
+		background-size:rem(100) rem(100);
+	}
+
+	main {
+		&#main {
+			max-width:rem(700);
+			width:100%;
+		}
 	}
 
 	:global(h1) {
@@ -52,5 +70,10 @@ const { title } = Astro.props as Props;
 	:global(code) {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+	h1,h2,h3,h4,h5,h6 {
+		font-family:freight-display-pro, serif;
+		font-weight:600;
 	}
 </style>
