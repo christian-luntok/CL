@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 import Layout from '@layouts/MainLayout.astro';
 import Title from '@components/Title.astro';
 import LogItem from '@components/LogItem.astro';
@@ -19,6 +20,48 @@ const sortLogsByDate = allLogs.sort((a,b) => {
 	<Title title="Christian Luntok" />
 	<div class="latest-logs text-grey dark:text-white flex flex-col section-wrapper justify-center px-8 py-8 sm:px-3">
 		<h2 class="text-xl mb-8">Latest Logs</h2>
+=======
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Christian Luntok.">
+	<main id="main">
+		<section class="main-wrapper">
+			<h1 class="text-center name-title">Christian Luntok</h1>
+			<ul class="introduction-list my-3 flex flex-wrap text-center justify-center w-100 content-center">
+				<li>Design.</li>
+				<li>Create.</li>
+				<li>Develop.</li>
+			</ul>
+		</section>
+		<!-- /.main-wrapper -->
+	</main>
+</Layout>
+
+<style lang="scss">
+	@import '../styles/reset.scss';
+	@import '../styles/mixin.scss';
+	:root {
+		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+	}
+
+	h1 {
+		margin: 2rem 0;
+		&.name-title {
+			font-size:rem(24);
+		}
+	}
+
+	main {
+		margin: auto;
+		padding: 0 15px;
+		max-width: rem(900);
+	}
+
+	.main-wrapper {
+		padding: rem(100) 0;
+	}
+>>>>>>> 3fbea8f (Update: Initial playaround with astro.)
 
 		<div class="logs">
 			{
@@ -50,9 +93,34 @@ const sortLogsByDate = allLogs.sort((a,b) => {
 		}
 	}
 
+<<<<<<< HEAD
 	.logs {
 		.log-item {
 		}
+=======
+	.introduction-list {
+		font-family:var(--font-main);
+		font-weight:700;
+		li {
+			font-size:rem(72);
+			display:block;
+			@screen md {
+				font-size: rem(96);
+				&:not(first-child) {
+				margin-left:rem(32);
+				}
+			}
+		}
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background: #4f39fa;
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+>>>>>>> 3fbea8f (Update: Initial playaround with astro.)
 	}
 
 	.introduction-list {

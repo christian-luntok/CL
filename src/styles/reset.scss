@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 /** 
 /  CSS RESET
 **/
+=======
+/* 
+// CSS RESET
+*/
+>>>>>>> 3fbea8f (Update: Initial playaround with astro.)
 *, *::before, *::after {
 box-sizing: border-box;
 }
@@ -8,7 +14,11 @@ box-sizing: border-box;
     margin: 0;
 }
 html, body {
+<<<<<<< HEAD
     // height: 100%;
+=======
+    height: 100%;
+>>>>>>> 3fbea8f (Update: Initial playaround with astro.)
 }
 body {
     line-height: 1.5;
