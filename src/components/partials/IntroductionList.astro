@@ -1,5 +1,6 @@
 ---
 export interface Props {
+<<<<<<< HEAD
     introductionList: Array<string>
 }
 const { introductionList } = Astro.props as Props;
@@ -9,6 +10,17 @@ const { introductionList } = Astro.props as Props;
     {
         introductionList.map( listItem => (
             <li class="dark:text-grey-100">{listItem}</li>
+=======
+    IntroductionList: Array<string>
+}
+const { IntroductionList } = Astro.props as Props;
+---
+
+<ul class="introduction-list my-3 flex flex-wrap text-center justify-center w-100 content-center">
+    {
+        IntroductionList.map( (IntroductionList) => (
+            <li>{IntroductionList}</li>
+>>>>>>> cade9f7 (Update: Created Title Component & Introduction List partial.)
         ))
     }
 </ul>

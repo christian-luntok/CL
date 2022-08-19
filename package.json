@@ -26,6 +26,12 @@
     "moment": "^2.29.4"
 =======
     "sass": "^1.54.4"
+<<<<<<< HEAD
 >>>>>>> 3fbea8f (Update: Initial playaround with astro.)
+=======
+  },
+  "dependencies": {
+    "locomotive-scroll": "^4.1.4"
+>>>>>>> cade9f7 (Update: Created Title Component & Introduction List partial.)
   }
 }

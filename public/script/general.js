@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+<<<<<<< HEAD
   "use strict";
 
     // const scroll = new LocomotiveScroll({
@@ -53,5 +54,16 @@ document.addEventListener("DOMContentLoaded", function() {
                   localStoragetheme = 'dark';
               }
           }
+=======
+  "use strict"
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        repeat: true,
+        getSpeed: true,
+        lerp: .08,
+        smoothMobile: false,
+        firefoxMultiplier: 50
+>>>>>>> cade9f7 (Update: Created Title Component & Introduction List partial.)
       });
 });
