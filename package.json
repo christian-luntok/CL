@@ -13,5 +13,8 @@
     "@astrojs/tailwind": "^1.0.0",
     "astro": "^1.0.6",
     "sass": "^1.54.4"
+  },
+  "dependencies": {
+    "locomotive-scroll": "^4.1.4"
   }
 }
