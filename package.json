@@ -13,6 +13,7 @@
     "@astrojs/tailwind": "^1.0.0",
     "astro": "^1.0.6",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.12",
     "sass": "^1.54.4",
@@ -29,6 +30,12 @@
 <<<<<<< HEAD
 >>>>>>> 3fbea8f (Update: Initial playaround with astro.)
 =======
+=======
+    "sass": "^1.54.4",
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.23"
+>>>>>>> 63836dd (Update: Updated tailwind config. Implemented Dark and Light Mode)
   },
   "dependencies": {
     "locomotive-scroll": "^4.1.4"

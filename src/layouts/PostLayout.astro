@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 import Layout from '@layouts/MainLayout.astro';
 import PostTitle from '@partials/PostTitle.astro';
 import TagsList from '@partials/TagsList.astro';
@@ -22,11 +23,29 @@ const tags = frontmatter.tags.split(', ');
         <!-- /.log-details -->
 
         <div class="content text-grey dark:text-white">
+=======
+import Layout from '../layouts/MainLayout.astro';
+import PostTitle from '../components/partials/PostTitle.astro';
+import TagsList from '../components/partials/TagsList.astro';
+
+const { frontmatter } = Astro.props;
+
+let tags = frontmatter.tags.split(', ');
+
+---
+
+<Layout title={frontmatter.title}>
+    <article class="post-wrapper section-wrapper m-auto">
+        <PostTitle title={frontmatter.title}/>
+        <TagsList tags={tags} />    
+        <div class="content">
+>>>>>>> 63836dd (Update: Updated tailwind config. Implemented Dark and Light Mode)
             <slot />
         </div>
         <!-- /.content -->
     </article>
 </Layout>
+<<<<<<< HEAD
 <script is:raw type="module">
     function calculateReadingTime() {
         const text = document.getElementById("logs-container").innerText;
@@ -38,3 +57,5 @@ const tags = frontmatter.tags.split(', ');
     calculateReadingTime();
 </script>
 
+=======
+>>>>>>> 63836dd (Update: Updated tailwind config. Implemented Dark and Light Mode)

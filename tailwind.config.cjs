@@ -4,9 +4,15 @@ module.exports = {
 	theme: {
 		extend: {},
 		fontFamily: {
+<<<<<<< HEAD
 			'title': ['Overpass', 'sans-serif'],
 			'display': ['freight-display-pro'],
 			'body': ['Overpass', 'sans-serif']
+=======
+			'title': ['Nunito', 'sans-serif'],
+			'display': ['freight-display-pro'],
+			'body': ['Nunito', 'sans-serif']
+>>>>>>> 63836dd (Update: Updated tailwind config. Implemented Dark and Light Mode)
 		},
 		colors: {
 			'white': '#FFFFFF',
