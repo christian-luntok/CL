@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/MainLayout.astro';
+import PostTitle from '../components/partials/PostTitle.astro';
+import TagsList from '../components/partials/TagsList.astro';
+
+const { frontmatter } = Astro.props;
+
+let tags = frontmatter.tags.split(', ');
+
+---
+
+<Layout title={frontmatter.title}>
+    <article class="post-wrapper section-wrapper m-auto">
+        <PostTitle title={frontmatter.title}/>
+        <TagsList tags={tags} />    
+        <div class="content">
+            <slot />
+        </div>
+        <!-- /.content -->
+    </article>
+</Layout>

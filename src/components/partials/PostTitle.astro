@@ -1,0 +1,11 @@
+---
+export interface Props {
+    title: string
+}
+const { title } = Astro.props as Props;
+---
+
+<div class="post-title text-5xl font-title">
+    <h1>{title}</h1>
+    <!-- /.tags -->
+</div>

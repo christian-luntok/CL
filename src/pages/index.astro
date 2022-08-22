@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/MainLayout.astro';
 import Title from '../components/Title.astro';
 ---
 
@@ -9,41 +9,14 @@ import Title from '../components/Title.astro';
 		github_link="https://github.com/christian-luntok"
 		linkedin_link="https://www.linkedin.com/in/christian-luntok/"
 	/>
-
 </Layout>
 
 <style lang="scss" is:global>
 	@use '../styles/mixin.scss' as *;
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
-
 	h1 {
-		margin: 2rem 0;
 		&.name-title {
-			font-size:rem(24);
+			font-size:rem(18);
 		}
-	}
-
-	main {
-		padding: 0 15px;
-	}
-
-	.title-wrapper {
-		padding: rem(150) 0;
-		min-height:100vh;
-		max-width: rem(900);
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
 	}
 
 	@keyframes pulse {
@@ -58,39 +31,17 @@ import Title from '../components/Title.astro';
 
 	.introduction-list {
 		font-family:var(--font-main);
-		font-weight:700;
 		li {
-			font-size:rem(72);
+			font-size:rem(28);
 			display:block;
 			@screen md {
-				font-size: rem(96);
-				&:not(first-child) {
-				margin-left:rem(32);
+				font-size: rem(28);
+				&:not(:last-child) {
+				margin-right:rem(8);
 				}
 			}
 		}
 	}
 
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
 
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
 </style>

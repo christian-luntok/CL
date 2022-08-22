@@ -1,4 +1,5 @@
 ---
+import Header from "../components/partials/Header.astro";
 export interface Props {
 	title: string;
 }
@@ -14,10 +15,13 @@ const { title } = Astro.props as Props;
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<link rel="stylesheet" href="https://use.typekit.net/szo7kfv.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 	</head>
-	<body>
-		<main id="main" data-scroll-container>
+	<body class="bg-white dark:bg-grey-900 text-black dark:text-white transition duration-300">
+		<Header />
+		<main id="main" class="m-auto mx-0" data-scroll-container>
 			<slot />
 		</main>
 		<script src="/script/general.js" is:inline type="module"></script>
@@ -30,10 +34,12 @@ const { title } = Astro.props as Props;
 	@use '../styles/mixin.scss' as *;
 	@import  '../../node_modules/locomotive-scroll/src/locomotive-scroll.scss';
 	:root {
+		color-scheme: dark light;
 		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
 		--font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
-		--font-main: freight-display-pro, serif;
+		--font-title: 'Nunito', sans-serif;
+		--font-body: 'Nunito', sans-serif;
 		--bg-primary: rgb(255, 255, 255);
 		--color-text: #28292A;
 		--color-bg: hsl(10, 21%, 95%);
@@ -44,9 +50,7 @@ const { title } = Astro.props as Props;
 	// Start adding styling
 	*/
 	html {
-		font-family: system-ui, sans-serif;
 		font-size: var(--font-size-base);
-		color: var(--color-text);
 		background-color: var(--bg-primary);
 	}
 
@@ -54,29 +58,46 @@ const { title } = Astro.props as Props;
 		margin: 0;
 		background-image: url(../img/noise-bg.png);
 		background-size:rem(150) rem(150);
+		font-family: var(--font-body);
+		font-weight: 500;
 	}
 
 	main {
+		min-height:100vh;
 		&#main {
 			width:100%;
 		}
 	}
 
-	:global(h1) {
-		font-size: var(--font-size-xl);
+	.section-wrapper {
+		max-width: rem(672);
+		margin:0 auto;
 	}
 
-	:global(h2) {
-		font-size: var(--font-size-lg);
+	a {
+		transition: color cubic-bezier(.32,2,.55,.27) 0.8s, fill cubic-bezier(.32,2,.55,.27) 0.8s;
+		svg {
+			transition: color cubic-bezier(.32,2,.55,.27) 0.8s, fill cubic-bezier(.32,2,.55,.27) 0.8s;
+		}
+		&:hover {
+
+		}
 	}
 
 	:global(code) {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
-
+	
 	h1,h2,h3,h4,h5,h6 {
-		font-family:freight-display-pro, serif;
+		font-family:var(--font-body);
 		font-weight:600;
+	}
+	.content {
+		font-family: var(--font-body);
+		h1, h2, h3, h4, h5, h6 {
+			font-family: inherit;
+			font-size:revert;
+		}
 	}
 </style>

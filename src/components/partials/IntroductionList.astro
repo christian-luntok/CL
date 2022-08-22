@@ -1,14 +1,14 @@
 ---
 export interface Props {
-    IntroductionList: Array<string>
+    introductionList: Array<string>
 }
-const { IntroductionList } = Astro.props as Props;
+const { introductionList } = Astro.props as Props;
 ---
 
-<ul class="introduction-list my-3 flex flex-wrap text-center justify-center w-100 content-center">
+<ul class="introduction-list my-3 flex flex-wrap w-100 content-center">
     {
-        IntroductionList.map( (IntroductionList) => (
-            <li>{IntroductionList}</li>
+        introductionList.map( listItem => (
+            <li>{listItem}</li>
         ))
     }
 </ul>
