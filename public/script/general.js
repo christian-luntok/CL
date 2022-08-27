@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
   "use strict";
 
     // const scroll = new LocomotiveScroll({
@@ -10,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //     lerp: .08,
     //     firefoxMultiplier: 50
     //   });
+<<<<<<< HEAD
         async function clCountVisits() {
             let response = await fetch('https://api.countapi.xyz/hit/cjluntok.com/visits/');
             let data = await response.json();
@@ -66,6 +70,17 @@ document.addEventListener("DOMContentLoaded", function() {
         firefoxMultiplier: 50
 >>>>>>> cade9f7 (Update: Created Title Component & Introduction List partial.)
       });
+=======
+
+    async function clCountVisits() {
+        let response = await fetch("https://api.countapi.xyz/hit/cjluntok.com/visits");
+        let data = await response.json();
+        return data;
+    }
+    clCountVisits().then(
+        data => document.getElementById('visit-counts').innerText = data.value
+    )
+>>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
     
       var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
       var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');

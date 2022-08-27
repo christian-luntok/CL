@@ -1,6 +1,7 @@
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from '@layouts/MainLayout.astro';
 import Title from '@components/Title.astro';
 import LogItem from '@components/LogItem.astro';
@@ -27,14 +28,36 @@ import Layout from '../layouts/Layout.astro';
 import Layout from '../layouts/MainLayout.astro';
 >>>>>>> 63836dd (Update: Updated tailwind config. Implemented Dark and Light Mode)
 import Title from '../components/Title.astro';
+=======
+import Layout from '@layouts/MainLayout.astro';
+import Title from '@components/Title.astro';
+const allLogs = await Astro.glob('./posts/*.md');
+>>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
 ---
 
 <Layout title="Christian Luntok">
-	<Title 
-		title="Christian Luntok"
-		github_link="https://github.com/christian-luntok"
-		linkedin_link="https://www.linkedin.com/in/christian-luntok/"
-	/>
+	<Title title="Christian Luntok" />
+	<div class="latest-logs text-grey dark:text-white flex flex-col section-wrapper justify-center px-8 pt-8 pb-16 sm:px-3">
+		<h2 class="text-xl mb-8">Latest Logs</h2>
+
+		<div class="logs">
+			{
+				allLogs.map((log) => 
+					<a href={log.url} class="log-item">
+						<div class="py-6 px-6 rounded-md border border-grey-200 ring-grey hover:bg-grey-200/10 hover:bg ease-in-out duration-300">
+							<div class="log-details flex items-center mb-1">
+								<span class="block text-xs">{log.frontmatter.date}</span>
+								<span class="ml-auto text-white dark:text-white block text-xs p-1 px-3 rounded-sm w-auto bg-[#4f39fa]">{log.frontmatter.tags}</span>
+							</div>
+							<h3 class="log-title text-lg">{log.frontmatter.title}</h3>
+						</div>
+					</a>
+				)
+			}
+		</div>
+		<!-- /.logs -->
+	</div>
+	<!-- /.latest-logs -->
 </Layout>
 
 <style lang="scss" is:global>
@@ -90,10 +113,20 @@ import Title from '../components/Title.astro';
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	.logs {
 		.log-item {
 		}
 =======
+=======
+	.logs {
+		.log-item {
+			display:block;
+			margin-bottom: rem(24);
+		}
+	}
+
+>>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
 	.introduction-list {
 		font-family:var(--font-main);
 		li {

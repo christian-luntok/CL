@@ -8,6 +8,7 @@ const { introductionList } = Astro.props as Props;
 ---
 
 <ul class="introduction-list mb-3 flex flex-wrap w-100 content-center">
+<<<<<<< HEAD
     {
         introductionList.map( listItem => (
             <li class="dark:text-grey-100">{listItem}</li>
@@ -21,6 +22,8 @@ const { introductionList } = Astro.props as Props;
 ---
 
 <ul class="introduction-list my-3 flex flex-wrap w-100 content-center">
+=======
+>>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
     {
 <<<<<<< HEAD
         IntroductionList.map( (IntroductionList) => (
@@ -28,8 +31,12 @@ const { introductionList } = Astro.props as Props;
 >>>>>>> cade9f7 (Update: Created Title Component & Introduction List partial.)
 =======
         introductionList.map( listItem => (
+<<<<<<< HEAD
             <li>{listItem}</li>
 >>>>>>> 63836dd (Update: Updated tailwind config. Implemented Dark and Light Mode)
+=======
+            <li class="dark:text-grey-100">{listItem}</li>
+>>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
         ))
     }
 </ul>

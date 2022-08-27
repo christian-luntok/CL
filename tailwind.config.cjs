@@ -5,6 +5,7 @@ module.exports = {
 		extend: {},
 		fontFamily: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			'title': ['Overpass', 'sans-serif'],
 			'display': ['freight-display-pro'],
 			'body': ['Overpass', 'sans-serif']
@@ -13,6 +14,11 @@ module.exports = {
 			'display': ['freight-display-pro'],
 			'body': ['Nunito', 'sans-serif']
 >>>>>>> 63836dd (Update: Updated tailwind config. Implemented Dark and Light Mode)
+=======
+			'title': ['Overpass', 'sans-serif'],
+			'display': ['freight-display-pro'],
+			'body': ['Overpass', 'sans-serif']
+>>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
 		},
 		colors: {
 			'white': '#FFFFFF',

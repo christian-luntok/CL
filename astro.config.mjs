@@ -32,5 +32,13 @@ export default defineConfig({
 >>>>>>> 3fbea8f (Update: Initial playaround with astro.)
 =======
   ],
+<<<<<<< HEAD
 >>>>>>> 63836dd (Update: Updated tailwind config. Implemented Dark and Light Mode)
+=======
+  vite: {
+    ssr: {
+      external: ["svgo"],
+    },
+  },
+>>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
 });
