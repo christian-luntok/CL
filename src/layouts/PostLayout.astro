@@ -1,19 +1,21 @@
 ---
-import Layout from '../layouts/MainLayout.astro';
-import PostTitle from '../components/partials/PostTitle.astro';
-import TagsList from '../components/partials/TagsList.astro';
+import Layout from '@layouts/MainLayout.astro';
+import PostTitle from '@partials/PostTitle.astro';
+// import TagsList from '@partials/TagsList.astro';
 
 const { frontmatter } = Astro.props;
 
-let tags = frontmatter.tags.split(', ');
+// let tags = frontmatter.tags.split(', ');
 
 ---
 
 <Layout title={frontmatter.title}>
-    <article class="post-wrapper section-wrapper m-auto">
+    <article class="post-wrapper section-wrapper m-auto px-8 sm:px-3">
+        <!-- <a href="/posts/" class="flex text-grey-600 dark:text-white leading-7 rounded-lg hover:text-grey-800 dark:hover:text-grey-200 transition-all h-6 mb-8 py-2">back to logs</a> -->
+        <span class="ml-auto mb-8 text-white inline-block dark:text-white text-xs p-1 px-3 rounded-sm w-auto bg-[#4f39fa]">{frontmatter.tags}</span>  
         <PostTitle title={frontmatter.title}/>
-        <TagsList tags={tags} />    
-        <div class="content">
+        <span class="block text-xs mb-8">{frontmatter.date}</span>
+        <div class="content text-grey dark:text-white">
             <slot />
         </div>
         <!-- /.content -->

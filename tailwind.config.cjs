@@ -4,9 +4,9 @@ module.exports = {
 	theme: {
 		extend: {},
 		fontFamily: {
-			'title': ['Nunito', 'sans-serif'],
+			'title': ['Overpass', 'sans-serif'],
 			'display': ['freight-display-pro'],
-			'body': ['Nunito', 'sans-serif']
+			'body': ['Overpass', 'sans-serif']
 		},
 		colors: {
 			'white': '#FFFFFF',

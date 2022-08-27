@@ -5,7 +5,7 @@ export interface Props {
 const { tags } = Astro.props as Props;
 ---
 
-<ul class="tags-styling">
+<ul class="tags-styling flex ">
     {tags.map((tag) => <li>{tag}</li>)}
 </ul>
 <!-- /.tags-styling -->

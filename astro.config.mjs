@@ -8,4 +8,9 @@ export default defineConfig({
       config: {},
     }),
   ],
+  vite: {
+    ssr: {
+      external: ["svgo"],
+    },
+  },
 });

@@ -5,10 +5,10 @@ export interface Props {
 const { introductionList } = Astro.props as Props;
 ---
 
-<ul class="introduction-list my-3 flex flex-wrap w-100 content-center">
+<ul class="introduction-list mb-3 flex flex-wrap w-100 content-center">
     {
         introductionList.map( listItem => (
-            <li>{listItem}</li>
+            <li class="dark:text-grey-100">{listItem}</li>
         ))
     }
 </ul>
