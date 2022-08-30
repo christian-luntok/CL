@@ -23,6 +23,7 @@
   "dependencies": {
     "astro-icon": "^0.7.3",
     "locomotive-scroll": "^4.1.4",
+<<<<<<< HEAD
     "lodash": "^4.17.21",
     "luxon": "^3.0.1",
     "moment": "^2.29.4"
@@ -45,5 +46,8 @@
     "astro-icon": "^0.7.3",
     "locomotive-scroll": "^4.1.4"
 >>>>>>> cade9f7 (Update: Created Title Component & Introduction List partial.)
+=======
+    "luxon": "^3.0.1"
+>>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
   }
 }

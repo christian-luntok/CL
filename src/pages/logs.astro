@@ -1,9 +1,14 @@
 ---
 import Layout from '@layouts/MainLayout.astro';
+<<<<<<< HEAD
 import LogItem from '@components/LogItem.astro';
 import { DateTime } from 'Luxon';
 import _ from 'lodash';
 import moment from 'moment';
+=======
+import { DateTime } from 'Luxon';
+import LogItem from '@components/LogItem.astro';
+>>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
 
 const allLogs = await Astro.glob('./logs/*.md');
 
@@ -14,6 +19,10 @@ const sortLogsByDate = allLogs.sort((a,b) => {
 	return afterDate - beforeDate;
 });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
 const groupLogsbyMonth = function( logsObj ) {
 	const objPeriod = {};
 	logsObj.map( (log, index ) => {
@@ -23,6 +32,7 @@ const groupLogsbyMonth = function( logsObj ) {
 		// date = ( date.toFormat('yyyy') - 1970 ) * ( 12 + date.toFormat('MM'));
 		// var year = (date.toFormat('yyyy') - 1970 );
 		// var month = ( parseInt(date.toFormat('MM')) + 12);
+<<<<<<< HEAD
 		// objPeriod[month] = objPeriod[month] || [];
 		// objPeriod[month].push(logsObj[index]);
 
@@ -38,10 +48,15 @@ const groupLogsbyMonth = function( logsObj ) {
 			objPeriod[month].push(log);
 		}
 		// August: [ {posts1} , {post2} ]
+=======
+		objPeriod[month] = objPeriod[month] || [];
+		objPeriod[month].push(logsObj[index]);
+>>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
 	});
 	return objPeriod;
 }
 
+<<<<<<< HEAD
 const groupedByMonthMoment = _(sortLogsByDate)
 	.groupBy( log => moment(log.frontmatter.compareDate).format('d/MM/yyyy') )
 	.mapValues( log => _.map( console.log(log) ) )
@@ -58,6 +73,10 @@ console.log( groupedByMonth );
 // 		}
 // }
 
+=======
+const groupedByMonth = groupLogsbyMonth(sortLogsByDate);
+
+>>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
 ---
 <Layout title="Logs 📝" description="Collection of logs that I'm putting within the website!">
 	<div class="latest-logs text-grey dark:text-white flex flex-col section-wrapper justify-center px-8 pt-0 pb-8 sm:px-3">

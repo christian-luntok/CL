@@ -31,27 +31,34 @@ import Title from '../components/Title.astro';
 =======
 import Layout from '@layouts/MainLayout.astro';
 import Title from '@components/Title.astro';
+<<<<<<< HEAD
 const allLogs = await Astro.glob('./posts/*.md');
 >>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
+=======
+import LogItem from '@components/LogItem.astro';
+
+import { DateTime } from 'Luxon';
+const allLogs = await Astro.glob('./logs/*.md');
+
+const sortLogsByDate = allLogs.sort((a,b) => {
+	const beforeDate = DateTime.fromFormat(a.frontmatter.compareDate, 'd/MM/yyyy');
+	const afterDate = DateTime.fromFormat(b.frontmatter.compareDate, 'd/MM/yyyy');
+	return afterDate - beforeDate;
+});
+
+
+>>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
 ---
 
-<Layout title="Christian Luntok">
+<Layout title="Christian Luntok" description="Welcome to my site, hope you enjoy your stay!">
 	<Title title="Christian Luntok" />
-	<div class="latest-logs text-grey dark:text-white flex flex-col section-wrapper justify-center px-8 pt-8 pb-16 sm:px-3">
+	<div class="latest-logs text-grey dark:text-white flex flex-col section-wrapper justify-center px-8 py-8 sm:px-3">
 		<h2 class="text-xl mb-8">Latest Logs</h2>
 
 		<div class="logs">
 			{
-				allLogs.map((log) => 
-					<a href={log.url} class="log-item">
-						<div class="py-6 px-6 rounded-md border border-grey-200 ring-grey hover:bg-grey-200/10 hover:bg ease-in-out duration-300">
-							<div class="log-details flex items-center mb-1">
-								<span class="block text-xs">{log.frontmatter.date}</span>
-								<span class="ml-auto text-white dark:text-white block text-xs p-1 px-3 rounded-sm w-auto bg-[#4f39fa]">{log.frontmatter.tags}</span>
-							</div>
-							<h3 class="log-title text-lg">{log.frontmatter.title}</h3>
-						</div>
-					</a>
+				sortLogsByDate.map((log) => 
+					<LogItem title={log.frontmatter.title} tags={log.frontmatter.tags} linkUrl={log.url} date={log.frontmatter.date} />
 				)
 			}
 		</div>
@@ -121,8 +128,6 @@ const allLogs = await Astro.glob('./posts/*.md');
 =======
 	.logs {
 		.log-item {
-			display:block;
-			margin-bottom: rem(24);
 		}
 	}
 

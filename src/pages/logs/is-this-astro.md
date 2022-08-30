@@ -9,7 +9,11 @@ tags: ASTRO, HTML, CSS, JS
 
 #### **Hello everyone!**
 
+<<<<<<< HEAD
 I recently encountered [Astro](https://astro.build/) which ifs really awesome if I say so myself! 
+=======
+I recently encountered [Astro](https://astro.build/) which is really awesome if I say so myself! 
+>>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
 I now have used it to make this blog site for random web development logs, css tricks and css/design playgrounds. 
 
 #### **What is Astro? 🚀**

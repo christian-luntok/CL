@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
     //     firefoxMultiplier: 50
     //   });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
         async function clCountVisits() {
             let response = await fetch('https://api.countapi.xyz/hit/cjluntok.com/visits/');
             let data = await response.json();
@@ -22,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         clCountVisits().then(
             data => document.getElementById('visit-counts').innerText = data.value
         )
+<<<<<<< HEAD
 
       var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
       var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
@@ -82,6 +86,9 @@ document.addEventListener("DOMContentLoaded", function() {
     )
 >>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
     
+=======
+
+>>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
       var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
       var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
   
