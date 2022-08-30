@@ -1,20 +1,22 @@
 ---
 layout: ../../layouts/PostLayout.astro
 title: Hey it's Astro! 🚀
-date: 27 Aug 2022
+date: 26 Aug 2022
+compareDate: 26/08/2022
+description: I recently encountered Astro which is really awesome if I say so myself! I now have used it to make this blog site for random web development logs, css tricks and css/design playgrounds. 
 tags: ASTRO, HTML, CSS, JS
 ---
 
-#### Hello everyone!
+#### **Hello everyone!**
 
 I recently encountered [Astro](https://astro.build/) which is really awesome if I say so myself! 
 I now have used it to make this blog site for random web development logs, css tricks and css/design playgrounds. 
 
-#### What is Astro? 🚀
+#### **What is Astro? 🚀**
 
 Astro lets you build fast websites with zero to minimal JavaScript. You can use React, Vue, Svelte or any mix and match of those and other languages/frameworks and it'll just take the output and serve the HTML to the browser! It is an awesome static site generator.
 
-#### Quick take on it: 📝
+#### **Quick take on it: 📝**
 
 
 * It is fast as they say it is - As Astro said in their documentations "it should be impossible to build a slow website in Astro" 🚀

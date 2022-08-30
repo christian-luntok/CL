@@ -1,0 +1,47 @@
+---
+import Layout from '@layouts/MainLayout.astro';
+import { DateTime } from 'Luxon';
+import LogItem from '@components/LogItem.astro';
+
+const allLogs = await Astro.glob('./logs/*.md');
+
+const sortLogsByDate = allLogs.sort((a,b) => {
+	const beforeDate = DateTime.fromFormat(a.frontmatter.compareDate, 'd/MM/yyyy');
+	const afterDate = DateTime.fromFormat(b.frontmatter.compareDate, 'd/MM/yyyy');
+	// return beforeDate < afterDate ? -1 : beforeDate > afterDate ? 1 : 0;
+	return afterDate - beforeDate;
+});
+
+
+const groupLogsbyMonth = function( logsObj ) {
+	const objPeriod = {};
+	logsObj.map( (log, index ) => {
+		const date = DateTime.fromFormat(log.frontmatter.compareDate, 'd/MM/yyyy');
+		const month = date.toFormat('MMMM') + " " + date.toFormat('yyyy');
+
+		// date = ( date.toFormat('yyyy') - 1970 ) * ( 12 + date.toFormat('MM'));
+		// var year = (date.toFormat('yyyy') - 1970 );
+		// var month = ( parseInt(date.toFormat('MM')) + 12);
+		objPeriod[month] = objPeriod[month] || [];
+		objPeriod[month].push(logsObj[index]);
+	});
+	return objPeriod;
+}
+
+const groupedByMonth = groupLogsbyMonth(sortLogsByDate);
+
+---
+<Layout title="Logs 📝" description="Collection of logs that I'm putting within the website!">
+	<div class="latest-logs text-grey dark:text-white flex flex-col section-wrapper justify-center px-8 pt-0 pb-8 sm:px-3">
+		<h2 class="text-xl mb-8">Logs</h2>
+		<div class="logs">
+			{
+				sortLogsByDate.map( (logItem) => 
+					<LogItem title={logItem.frontmatter.title} tags={logItem.frontmatter.tags} linkUrl={logItem.url} date={logItem.frontmatter.date} />
+				)
+			}
+		</div>
+		<!-- /.logs -->
+	</div>
+	<!-- /.latest-logs -->
+</Layout>

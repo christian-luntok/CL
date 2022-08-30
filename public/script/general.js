@@ -9,16 +9,15 @@ document.addEventListener("DOMContentLoaded", function() {
     //     lerp: .08,
     //     firefoxMultiplier: 50
     //   });
+        async function clCountVisits() {
+            let response = await fetch('https://api.countapi.xyz/hit/cjluntok.com/visits/');
+            let data = await response.json();
+            return data;
+        }
+        clCountVisits().then(
+            data => document.getElementById('visit-counts').innerText = data.value
+        )
 
-    async function clCountVisits() {
-        let response = await fetch("https://api.countapi.xyz/hit/cjluntok.com/visits");
-        let data = await response.json();
-        return data;
-    }
-    clCountVisits().then(
-        data => document.getElementById('visit-counts').innerText = data.value
-    )
-    
       var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
       var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
   

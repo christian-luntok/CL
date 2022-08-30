@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "astro-icon": "^0.7.3",
-    "locomotive-scroll": "^4.1.4"
+    "locomotive-scroll": "^4.1.4",
+    "luxon": "^3.0.1"
   }
 }
