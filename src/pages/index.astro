@@ -1,7 +1,4 @@
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '@layouts/MainLayout.astro';
 import Title from '@components/Title.astro';
 import LogItem from '@components/LogItem.astro';
@@ -14,47 +11,12 @@ const sortLogsByDate = allLogs.sort((a,b) => {
 	const afterDate = DateTime.fromFormat(b.frontmatter.compareDate, 'd/MM/yyyy');
 	return afterDate - beforeDate;
 });
-
-
 ---
 
 <Layout title="Christian Luntok" description="Welcome to my site, hope you enjoy your stay!">
 	<Title title="Christian Luntok" />
 	<div class="latest-logs text-grey dark:text-white flex flex-col section-wrapper justify-center px-8 py-8 sm:px-3">
 		<h2 class="text-xl mb-8">Latest Logs</h2>
-=======
-import Layout from '../layouts/Layout.astro';
-=======
-import Layout from '../layouts/MainLayout.astro';
->>>>>>> 63836dd (Update: Updated tailwind config. Implemented Dark and Light Mode)
-import Title from '../components/Title.astro';
-=======
-import Layout from '@layouts/MainLayout.astro';
-import Title from '@components/Title.astro';
-<<<<<<< HEAD
-const allLogs = await Astro.glob('./posts/*.md');
->>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
-=======
-import LogItem from '@components/LogItem.astro';
-
-import { DateTime } from 'Luxon';
-const allLogs = await Astro.glob('./logs/*.md');
-
-const sortLogsByDate = allLogs.sort((a,b) => {
-	const beforeDate = DateTime.fromFormat(a.frontmatter.compareDate, 'd/MM/yyyy');
-	const afterDate = DateTime.fromFormat(b.frontmatter.compareDate, 'd/MM/yyyy');
-	return afterDate - beforeDate;
-});
-
-
->>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
----
-
-<Layout title="Christian Luntok" description="Welcome to my site, hope you enjoy your stay!">
-	<Title title="Christian Luntok" />
-	<div class="latest-logs text-grey dark:text-white flex flex-col section-wrapper justify-center px-8 py-8 sm:px-3">
-		<h2 class="text-xl mb-8">Latest Logs</h2>
-
 		<div class="logs">
 			{
 				sortLogsByDate.map((log) => 
@@ -73,88 +35,15 @@ const sortLogsByDate = allLogs.sort((a,b) => {
 		&.name-title {
 			font-size:rem(18);
 		}
-	}
-
-<<<<<<< HEAD
-	main {
-		padding: 0 15px;
 	}
 
 	.title-wrapper {
-		padding: rem(150) 0;
-		min-height:100vh;
 		max-width: rem(900);
 	}
->>>>>>> 3fbea8f (Update: Initial playaround with astro.)
 
-		<div class="logs">
-			{
-				sortLogsByDate.map((log) => 
-					<LogItem title={log.frontmatter.title} tags={log.frontmatter.tags} linkUrl={log.url} date={log.frontmatter.date} />
-				)
-			}
-		</div>
-		<!-- /.logs -->
-	</div>
-	<!-- /.latest-logs -->
-</Layout>
-
-<style lang="scss" is:global>
-	@use '../styles/mixin.scss' as *;
-	h1 {
-		&.name-title {
-			font-size:rem(18);
-		}
-	}
-
-=======
->>>>>>> 63836dd (Update: Updated tailwind config. Implemented Dark and Light Mode)
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 	.logs {
 		.log-item {
 		}
-=======
-=======
-	.logs {
-		.log-item {
-		}
-	}
-
->>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
-	.introduction-list {
-		font-family:var(--font-main);
-		li {
-			font-size:rem(28);
-			display:block;
-			@screen md {
-				font-size: rem(28);
-				&:not(:last-child) {
-				margin-right:rem(8);
-				}
-			}
-		}
-	}
-
-<<<<<<< HEAD
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
->>>>>>> 3fbea8f (Update: Initial playaround with astro.)
 	}
 
 	.introduction-list {
@@ -170,9 +59,4 @@ const sortLogsByDate = allLogs.sort((a,b) => {
 			}
 		}
 	}
-
-
-=======
-
->>>>>>> 63836dd (Update: Updated tailwind config. Implemented Dark and Light Mode)
 </style>
