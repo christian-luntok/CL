@@ -20,8 +20,43 @@
   "dependencies": {
     "astro-icon": "^0.7.3",
     "locomotive-scroll": "^4.1.4",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b54a55c5546f7b262e8bddb8a11188ab73f68085
     "lodash": "^4.17.21",
     "luxon": "^3.0.3",
     "moment": "^2.29.4"
+<<<<<<< HEAD
+=======
+=======
+    "sass": "^1.54.4"
+<<<<<<< HEAD
+>>>>>>> 3fbea8f (Update: Initial playaround with astro.)
+=======
+=======
+    "sass": "^1.54.4",
+=======
+>>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "sass": "^1.54.4",
+    "tailwindcss": "^3.0.23"
+>>>>>>> 63836dd (Update: Updated tailwind config. Implemented Dark and Light Mode)
+  },
+  "dependencies": {
+    "astro-icon": "^0.7.3",
+    "locomotive-scroll": "^4.1.4"
+>>>>>>> cade9f7 (Update: Created Title Component & Introduction List partial.)
+=======
+    "luxon": "^3.0.1"
+>>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
+=======
+    "lodash": "^4.17.21",
+    "luxon": "^3.0.1",
+    "moment": "^2.29.4"
+>>>>>>> d1326cb (Addition: Trying to add lodash and moment as date converter and trying out lodash array grouping functionality)
+>>>>>>> b54a55c5546f7b262e8bddb8a11188ab73f68085
   }
 }
