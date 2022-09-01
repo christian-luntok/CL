@@ -1,7 +1,9 @@
 ---
 import Layout from '@layouts/MainLayout.astro';
-import { DateTime } from 'Luxon';
 import LogItem from '@components/LogItem.astro';
+import { DateTime } from 'Luxon';
+import _ from 'lodash';
+import moment from 'moment';
 
 const allLogs = await Astro.glob('./logs/*.md');
 
@@ -31,17 +33,30 @@ const groupLogsbyMonth = function( logsObj ) {
 		// }
 
 		if ( !objPeriod[month] ) {
-			objPeriod[month] = [log.frontmatter.title];
+			objPeriod[month] = [log];
 		} else {
-			objPeriod[month].push(log.frontmatter.title);
+			objPeriod[month].push(log);
 		}
+		// August: [ {posts1} , {post2} ]
 	});
 	return objPeriod;
 }
 
+const groupedByMonthMoment = _(sortLogsByDate)
+	.groupBy( log => moment(log.frontmatter.compareDate).format('d/MM/yyyy') )
+	.mapValues( log => _.map( console.log(log) ) )
+	.value();
+
+console.log(groupedByMonthMoment);
+
 const groupedByMonth = groupLogsbyMonth(sortLogsByDate);
 
-console.log(groupedByMonth);
+console.log( groupedByMonth );
+// for (var i in groupedByMonth ) {
+// 		if ( groupedByMonth.hasOwnProperty(i) ) {
+// 			console.log(groupedByMonth+'->'+groupedByMonth[i]);
+// 		}
+// }
 
 ---
 <Layout title="Logs 📝" description="Collection of logs that I'm putting within the website!">
