@@ -1,4 +1,4 @@
-# Welcome to daily-dev-tips.com
+# Welcome!
 
 ## About
 
