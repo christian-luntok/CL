@@ -1,6 +1,4 @@
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '@layouts/MainLayout.astro';
 import PostTitle from '@partials/PostTitle.astro';
 import TagsList from '@partials/TagsList.astro';
@@ -12,73 +10,23 @@ const tags = frontmatter.tags.split(', ');
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.description} >
-    <article id="logs-container" class="post-wrapper section-wrapper m-auto px-8 sm:px-3">
+    <article id="logs-container" class="post-wrapper section-wrapper m-auto px-5 sm:px-3">
         <!-- <span class="ml-auto mb-8 text-white inline-block dark:text-white text-xs p-1 px-3 rounded-sm w-auto bg-[#d82456]">{frontmatter.tags}</span>   -->
         <TagsList tags={tags} />
         <PostTitle title={frontmatter.title}/>
         <div class="log-details mb-8">
             <span class="inline-block text-xs text-grey dark:text-white">{frontmatter.date}</span> 
             <span class="mx-2 text-grey dark:text-white">•</span>
-<<<<<<< HEAD
             <span id="time-container" class="inline-block text-xs text-grey dark:text-white"></span>
         </div>
         <!-- /.log-details -->
 
         <div class="content text-grey dark:text-white">
-=======
-import Layout from '../layouts/MainLayout.astro';
-import PostTitle from '../components/partials/PostTitle.astro';
-import TagsList from '../components/partials/TagsList.astro';
-=======
-import Layout from '@layouts/MainLayout.astro';
-import PostTitle from '@partials/PostTitle.astro';
-<<<<<<< HEAD
-// import TagsList from '@partials/TagsList.astro';
->>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
-=======
-import TagsList from '@partials/TagsList.astro';
->>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
-
-const { frontmatter } = Astro.props;
-
-const tags = frontmatter.tags.split(', ');
-
----
-
-<Layout title={frontmatter.title} description={frontmatter.description} >
-    <article id="logs-container" class="post-wrapper section-wrapper m-auto px-8 sm:px-3">
-        <!-- <span class="ml-auto mb-8 text-white inline-block dark:text-white text-xs p-1 px-3 rounded-sm w-auto bg-[#d82456]">{frontmatter.tags}</span>   -->
-        <TagsList tags={tags} />
-        <PostTitle title={frontmatter.title}/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <TagsList tags={tags} />    
-        <div class="content">
->>>>>>> 63836dd (Update: Updated tailwind config. Implemented Dark and Light Mode)
-=======
-        <span class="block text-xs mb-8">{frontmatter.date}</span>
-=======
-        <div class="log-details mb-8">
-            <span class="inline-block text-xs text-grey dark:text-white">{frontmatter.date}</span> 
-            <span class="mx-2">•</span>
-=======
->>>>>>> aec643f (Update: Implemented update on the bullet point for Post Layout.)
-            <span id="time-container" class="inline-block text-xs text-grey dark:text-white"></span>
-        </div>
-        <!-- /.log-details -->
-
->>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
-        <div class="content text-grey dark:text-white">
->>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
             <slot />
         </div>
         <!-- /.content -->
     </article>
 </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
 <script is:raw type="module">
     function calculateReadingTime() {
         const text = document.getElementById("logs-container").innerText;
@@ -89,9 +37,3 @@ const tags = frontmatter.tags.split(', ');
     }
     calculateReadingTime();
 </script>
-
-<<<<<<< HEAD
-=======
->>>>>>> 63836dd (Update: Updated tailwind config. Implemented Dark and Light Mode)
-=======
->>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)

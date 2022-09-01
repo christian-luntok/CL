@@ -12,9 +12,6 @@
   "devDependencies": {
     "@astrojs/tailwind": "^1.0.0",
     "astro": "^1.0.6",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.12",
     "sass": "^1.54.4",
@@ -23,31 +20,8 @@
   "dependencies": {
     "astro-icon": "^0.7.3",
     "locomotive-scroll": "^4.1.4",
-<<<<<<< HEAD
     "lodash": "^4.17.21",
-    "luxon": "^3.0.1",
+    "luxon": "^3.0.3",
     "moment": "^2.29.4"
-=======
-    "sass": "^1.54.4"
-<<<<<<< HEAD
->>>>>>> 3fbea8f (Update: Initial playaround with astro.)
-=======
-=======
-    "sass": "^1.54.4",
-=======
->>>>>>> 64311ed (Addition: Finalised Post Layout for posts layout and tried Markdown using the PostLayout)
-    "autoprefixer": "^10.4.4",
-    "postcss": "^8.4.12",
-    "sass": "^1.54.4",
-    "tailwindcss": "^3.0.23"
->>>>>>> 63836dd (Update: Updated tailwind config. Implemented Dark and Light Mode)
-  },
-  "dependencies": {
-    "astro-icon": "^0.7.3",
-    "locomotive-scroll": "^4.1.4"
->>>>>>> cade9f7 (Update: Created Title Component & Introduction List partial.)
-=======
-    "luxon": "^3.0.1"
->>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
   }
 }
