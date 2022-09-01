@@ -60,6 +60,12 @@ const groupLogsbyMonth = function( logsObj ) {
 		// objPeriod[month] = objPeriod[month] || [];
 		// objPeriod[month].push(logsObj[index]);
 
+		// if ( !objPeriod['month'][month] ) {
+		// 	objPeriod['month'][month] = [log.frontmatter.title];
+		// } else {
+		// 	objPeriod['month'][month].push(log.frontmatter.title);
+		// }
+
 		if ( !objPeriod[month] ) {
 			objPeriod[month] = [log.frontmatter.title];
 		} else {
