@@ -24,6 +24,7 @@
     "astro-icon": "^0.7.3",
     "locomotive-scroll": "^4.1.4",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "lodash": "^4.17.21",
     "luxon": "^3.0.1",
     "moment": "^2.29.4"
@@ -49,5 +50,10 @@
 =======
     "luxon": "^3.0.1"
 >>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
+=======
+    "lodash": "^4.17.21",
+    "luxon": "^3.0.1",
+    "moment": "^2.29.4"
+>>>>>>> d1326cb (Addition: Trying to add lodash and moment as date converter and trying out lodash array grouping functionality)
   }
 }

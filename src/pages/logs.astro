@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/MainLayout.astro';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import LogItem from '@components/LogItem.astro';
 import { DateTime } from 'Luxon';
 import _ from 'lodash';
@@ -9,6 +10,12 @@ import moment from 'moment';
 import { DateTime } from 'Luxon';
 import LogItem from '@components/LogItem.astro';
 >>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
+=======
+import LogItem from '@components/LogItem.astro';
+import { DateTime } from 'Luxon';
+import _ from 'lodash';
+import moment from 'moment';
+>>>>>>> d1326cb (Addition: Trying to add lodash and moment as date converter and trying out lodash array grouping functionality)
 
 const allLogs = await Astro.glob('./logs/*.md');
 
@@ -67,16 +74,23 @@ const groupLogsbyMonth = function( logsObj ) {
 		// }
 
 		if ( !objPeriod[month] ) {
-			objPeriod[month] = [log.frontmatter.title];
+			objPeriod[month] = [log];
 		} else {
-			objPeriod[month].push(log.frontmatter.title);
+			objPeriod[month].push(log);
 		}
+<<<<<<< HEAD
 >>>>>>> ca181f1 (Update: Initial update to separate the posts per month)
+=======
+		// August: [ {posts1} , {post2} ]
+>>>>>>> d1326cb (Addition: Trying to add lodash and moment as date converter and trying out lodash array grouping functionality)
 	});
 	return objPeriod;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d1326cb (Addition: Trying to add lodash and moment as date converter and trying out lodash array grouping functionality)
 const groupedByMonthMoment = _(sortLogsByDate)
 	.groupBy( log => moment(log.frontmatter.compareDate).format('d/MM/yyyy') )
 	.mapValues( log => _.map( console.log(log) ) )
@@ -84,6 +98,7 @@ const groupedByMonthMoment = _(sortLogsByDate)
 
 console.log(groupedByMonthMoment);
 
+<<<<<<< HEAD
 const groupedByMonth = groupLogsbyMonth(sortLogsByDate);
 
 console.log( groupedByMonth );
@@ -100,6 +115,16 @@ const groupedByMonth = groupLogsbyMonth(sortLogsByDate);
 >>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
 =======
 console.log(groupedByMonth);
+=======
+const groupedByMonth = groupLogsbyMonth(sortLogsByDate);
+
+console.log( groupedByMonth );
+// for (var i in groupedByMonth ) {
+// 		if ( groupedByMonth.hasOwnProperty(i) ) {
+// 			console.log(groupedByMonth+'->'+groupedByMonth[i]);
+// 		}
+// }
+>>>>>>> d1326cb (Addition: Trying to add lodash and moment as date converter and trying out lodash array grouping functionality)
 
 >>>>>>> ca181f1 (Update: Initial update to separate the posts per month)
 ---
