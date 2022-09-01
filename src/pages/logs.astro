@@ -1,22 +1,9 @@
 ---
-import Layout from '@layouts/MainLayout.astro';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import LogItem from '@components/LogItem.astro';
 import Layout from '@layouts/MainLayout.astro';
 import { DateTime } from 'Luxon';
 import _ from 'lodash';
 import moment from 'moment';
-=======
-import { DateTime } from 'Luxon';
-import LogItem from '@components/LogItem.astro';
->>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
-=======
-import LogItem from '@components/LogItem.astro';
-import { DateTime } from 'Luxon';
-import _ from 'lodash';
-import moment from 'moment';
->>>>>>> d1326cb (Addition: Trying to add lodash and moment as date converter and trying out lodash array grouping functionality)
 
 const allLogs = await Astro.glob('./logs/*.md');
 
@@ -36,8 +23,6 @@ const groupLogsbyMonth = function( logsObj ) {
 		// date = ( date.toFormat('yyyy') - 1970 ) * ( 12 + date.toFormat('MM'));
 		// var year = (date.toFormat('yyyy') - 1970 );
 		// var month = ( parseInt(date.toFormat('MM')) + 12);
-<<<<<<< HEAD
-<<<<<<< HEAD
 		// objPeriod[month] = objPeriod[month] || [];
 		// objPeriod[month].push(logsObj[index]);
 
@@ -48,43 +33,14 @@ const groupLogsbyMonth = function( logsObj ) {
 		// }
 
 		if ( !objPeriod[month] ) {
-			objPeriod[month] = [log];
+			objPeriod[month] = [log.frontmatter.title];
 		} else {
-			objPeriod[month].push(log);
+			objPeriod[month].push(log.frontmatter.title);
 		}
-		// August: [ {posts1} , {post2} ]
-=======
-		objPeriod[month] = objPeriod[month] || [];
-		objPeriod[month].push(logsObj[index]);
->>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
-=======
-		// objPeriod[month] = objPeriod[month] || [];
-		// objPeriod[month].push(logsObj[index]);
-
-		// if ( !objPeriod['month'][month] ) {
-		// 	objPeriod['month'][month] = [log.frontmatter.title];
-		// } else {
-		// 	objPeriod['month'][month].push(log.frontmatter.title);
-		// }
-
-		if ( !objPeriod[month] ) {
-			objPeriod[month] = [log];
-		} else {
-			objPeriod[month].push(log);
-		}
-<<<<<<< HEAD
->>>>>>> ca181f1 (Update: Initial update to separate the posts per month)
-=======
-		// August: [ {posts1} , {post2} ]
->>>>>>> d1326cb (Addition: Trying to add lodash and moment as date converter and trying out lodash array grouping functionality)
 	});
 	return objPeriod;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d1326cb (Addition: Trying to add lodash and moment as date converter and trying out lodash array grouping functionality)
 const groupedByMonthMoment = _(sortLogsByDate)
 	.groupBy( log => moment(log.frontmatter.compareDate).format('d/MM/yyyy') )
 	.mapValues( log => _.map( console.log(log) ) )
@@ -92,7 +48,6 @@ const groupedByMonthMoment = _(sortLogsByDate)
 
 console.log(groupedByMonthMoment);
 
-<<<<<<< HEAD
 const groupedByMonth = groupLogsbyMonth(sortLogsByDate);
 
 console.log( groupedByMonth );
@@ -102,26 +57,6 @@ console.log( groupedByMonth );
 // 			console.log(groupedByMonth+'->'+groupedByMonth[i]);
 // 		}
 // }
-
-=======
-const groupedByMonth = groupLogsbyMonth(sortLogsByDate);
-
-<<<<<<< HEAD
->>>>>>> d66a6c6 (Update: Changes within the Logs and sorting of log items.)
-=======
-console.log(groupedByMonth);
-=======
-const groupedByMonth = groupLogsbyMonth(sortLogsByDate);
-
-console.log( groupedByMonth );
-// for (var i in groupedByMonth ) {
-// 		if ( groupedByMonth.hasOwnProperty(i) ) {
-// 			console.log(groupedByMonth+'->'+groupedByMonth[i]);
-// 		}
-// }
->>>>>>> d1326cb (Addition: Trying to add lodash and moment as date converter and trying out lodash array grouping functionality)
-
->>>>>>> ca181f1 (Update: Initial update to separate the posts per month)
 ---
 <Layout title="Logs 📝" description="Collection of logs that I'm putting within the website!">
 	<div class="latest-logs text-grey dark:text-white flex flex-col section-wrapper justify-center px-8 pt-0 pb-8 sm:px-3">
