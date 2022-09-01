@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# cl-home
-=======
 # Welcome to daily-dev-tips.com
 
 ## About
