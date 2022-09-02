@@ -2,8 +2,8 @@
 import Layout from '@layouts/MainLayout.astro';
 import Title from '@components/Title.astro';
 import LogItem from '@components/LogItem.astro';
+import { DateTime } from 'luxon';
 
-import { DateTime } from 'Luxon';
 const allLogs = await Astro.glob('./logs/*.md');
 
 const sortLogsByDate = allLogs.sort((a,b) => {
