@@ -7,7 +7,7 @@ export interface Props {
 
 const { title } = Astro.props as Props;
 ---
-<section class="title-wrapper grid grid-cols-1 gap-3 sm:grid-cols-2 items-center section-wrapper px-8 flex flex-wrap items-center m-auto text-grey sm:px-3">
+<section class="grid grid-cols-1 gap-3 sm:grid-cols-2 items-center section-wrapper px-8 flex flex-wrap items-center m-auto text-grey sm:px-3">
     <div class="title-section flex flex-col">
         <h1 class="name-title mt-0 mb-0 dark:text-white">{title}</h1>
         <IntroductionList introductionList={["Design.", "Create.", "Develop.", ]} />
