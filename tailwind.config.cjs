@@ -4,9 +4,9 @@ module.exports = {
 	theme: {
 		extend: {},
 		fontFamily: {
-			'title': ['Overpass', 'sans-serif'],
+			'title': ['DM Sans', 'sans-serif'],
 			'display': ['freight-display-pro'],
-			'body': ['Overpass', 'sans-serif']
+			'body': ['DM Sans', 'sans-serif']
 		},
 		colors: {
 			'white': '#FFFFFF',
