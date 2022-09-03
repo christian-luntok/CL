@@ -50,7 +50,15 @@ const sortLogsByDate = allLogs.sort((a,b) => {
 ---
 <Layout title="Logs 📝" description="Collection of logs that I'm putting within the website!">
 	<div class="latest-logs text-grey dark:text-white flex flex-col section-wrapper justify-center px-8 pt-0 pb-8 sm:px-3">
-		<h2 class="text-xl mb-8">Logs</h2>
+		<div class="mb-8">
+			<h2 class="text-xl mb-4">Logs</h2>
+			<div class="content">
+				<p>Welcome to this little corner of the web where I share my thoughts and logs within the web developent space.</p>
+				<p>I hope you find some of them interesting. If so, I'd love to hear from you!</p>
+			</div>
+			<!-- /.content -->
+		</div>
+		<!-- /.title-wrapper -->
 		<div class="logs">
 			{
 				sortLogsByDate.map( (logItem) => 
