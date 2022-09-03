@@ -1,0 +1,25 @@
+---
+import LogItem from '@components/LogItem.astro';
+import { DateTime } from 'luxon';
+
+const { category } = Astro.props;
+
+const allLogs = await Astro.glob('../pages/logs/*.md');
+
+const sortLogsByDate = allLogs.sort((a,b) => {
+	const beforeDate = DateTime.fromFormat(a.frontmatter.compareDate, 'd/MM/yyyy');
+	const afterDate = DateTime.fromFormat(b.frontmatter.compareDate, 'd/MM/yyyy');
+	return afterDate - beforeDate;
+});
+
+const filterByCategory = ( logs, filters ) => {
+    return logs.filter( log => filters.every( filter => log.frontmatter.category.includes(filter) ) )
+}
+
+const filteredByCategory = filterByCategory(sortLogsByDate, [category]);
+---
+{
+    filteredByCategory.map((log) => 
+        <LogItem title={log.frontmatter.title} tags={log.frontmatter.tags} linkUrl={log.url} date={log.frontmatter.date} />
+    )
+}

@@ -4,9 +4,9 @@ module.exports = {
 	theme: {
 		extend: {},
 		fontFamily: {
-			'title': ['DM Sans', 'sans-serif'],
+			'title': ['Lato', 'sans-serif'],
 			'display': ['freight-display-pro'],
-			'body': ['DM Sans', 'sans-serif']
+			'body': ['Lato', 'sans-serif']
 		},
 		colors: {
 			'white': '#FFFFFF',

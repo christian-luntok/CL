@@ -4,6 +4,7 @@ title: Weekly Habits?
 date: 03 Sept 2022
 compareDate: 03/09/2022
 description: Trying to develop and maintain these habits. Hopefully make it a weekly and daily basis.
+category: logs
 tags: Log
 ---
 
