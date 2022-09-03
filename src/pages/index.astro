@@ -33,7 +33,7 @@ const sortLogsByDate = allLogs.sort((a,b) => {
 	@use '../styles/mixin.scss' as *;
 	h1 {
 		&.name-title {
-			font-size:rem(18);
+			font-size:rem(16);
 		}
 	}
 
@@ -49,10 +49,11 @@ const sortLogsByDate = allLogs.sort((a,b) => {
 	.introduction-list {
 		font-family:var(--font-main);
 		li {
-			font-size:rem(28);
+			font-size:rem(24);
+			font-weight: 700;
 			display:block;
 			@screen md {
-				font-size: rem(28);
+				font-size: rem(26);
 				&:not(:last-child) {
 				margin-right:rem(8);
 				}
