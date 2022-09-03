@@ -29,11 +29,19 @@ const tags = frontmatter.tags.split(', ');
 </Layout>
 <script is:raw type="module">
     function calculateReadingTime() {
-        const text = document.getElementById("logs-container").innerText;
-        const wpm = 225; //average adult words per minute
-        const words = text.trim().split(/\s+/).length;
-        const time = Math.ceil(words / wpm);
-        document.getElementById("time-container").innerText = time + " min read";
+        // Gets the article class container containing the content.
+        const content = document.getElementById("logs-container").innerText;
+
+        // Average adult words per minute.
+        const avgWpm = 225; 
+
+        // Count the words for the content
+        const words = content.trim().split(/\s+/).length;
+
+        // Calculate total time takes to read the content based on the average words per minute of an adult.
+        const totalTime = Math.ceil(words / avgWpm);
+        
+        document.getElementById("time-container").innerText = totalTime + " min read";
     }
     calculateReadingTime();
 </script>

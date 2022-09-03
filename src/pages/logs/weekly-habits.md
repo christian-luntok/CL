@@ -22,7 +22,7 @@ I'm trying to do a daily commit to establish discipine on me actually trying to 
 
 And making technical log post, pushes and put pressure me to actually try and make lists of programming posts that I would like to make.
 
-Having to read 5 pages a day, the small amout of reading that I think I get done <i>most days</i>? Keeping it ridiculously simple makes it much harder to come up with an excuse not to do it. It's not a ridiculous amount of pages but it makes me conscioulsy take time to sit down, pick the book and get started. 
+Having to read 5 pages a day, the small amount of reading that I think I get done <i>most days</i>? Keeping it ridiculously simple makes it much harder to come up with an excuse not to do it. It's not a ridiculous amount of pages but it makes me conscioulsy take time to sit down, pick the book and get started. 
 
 Though even then it's still a little hard to accomplish daily. But I'm still on the stage of making small progress towards building that habit.
 
