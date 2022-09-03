@@ -28,7 +28,7 @@ Though even then it's still a little hard to accomplish daily. But I'm still on 
 
 ---
 
-I think all these habits are very worthwhile to do and I really enjoy doing them. But at the same time, I get the feeling that I'm already behind everyday because of these tasks that I imposed on myself that I shouldn't escape.
+I think all these habits are very worthwhile to do and I really enjoy doing them. But at the same time, I get the feeling that when the day starts I'm already feeling behind because of these tasks that I imposed on myself that I shouldn't escape.
 
 
 
