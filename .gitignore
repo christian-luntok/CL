@@ -1,7 +1,7 @@
 # build output
 dist/
 .output/
-.vscode/
+
 
 # dependencies
 node_modules/
@@ -19,3 +19,7 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+
+
+.vscode/

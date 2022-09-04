@@ -28,7 +28,7 @@ On the playground part of the website, I wanna try to adding snippets, experimen
 
 ### **Font**
 
-I was tempted to use a serif font for the title and body font but I proceeded to use [Overpass](https://fonts.google.com/specimen/Overpass) a Sans-Serif Google font, for the typograhpy of the site.
+I was tempted to use a serif font for the title and body font but I proceeded to use [Manrope](https://fonts.google.com/specimen/Manrope) a Sans-Serif Google font, for the typograhpy of the site.
 
 
 ### **Build**
