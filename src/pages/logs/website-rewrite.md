@@ -4,6 +4,7 @@ title: Website Rewrite 📝
 date: 28 Aug 2022
 compareDate: 28/08/2022
 description: I've rewritten my website again! That's something I tend to do quite a lot, I wanted to do a quick rundown of the new site.
+category: logs
 tags: HTML, CSS, JS
 ---
 

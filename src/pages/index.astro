@@ -1,28 +1,17 @@
 ---
 import Layout from '@layouts/MainLayout.astro';
 import Title from '@components/Title.astro';
-import LogItem from '@components/LogItem.astro';
-import { DateTime } from 'luxon';
+import GetLogs from '@components/GetLogs.astro';
 
-const allLogs = await Astro.glob('./logs/*.md');
 
-const sortLogsByDate = allLogs.sort((a,b) => {
-	const beforeDate = DateTime.fromFormat(a.frontmatter.compareDate, 'd/MM/yyyy');
-	const afterDate = DateTime.fromFormat(b.frontmatter.compareDate, 'd/MM/yyyy');
-	return afterDate - beforeDate;
-});
 ---
 
 <Layout title="Christian Luntok" description="Welcome to my site, hope you enjoy your stay!">
 	<Title title="Christian Luntok" />
 	<div class="latest-logs text-grey dark:text-white flex flex-col section-wrapper justify-center px-8 py-8 sm:px-3">
-		<h2 class="text-xl mb-8">Latest Logs</h2>
+		<h2 class="text-xl mb-8">Latest Posts</h2>
 		<div class="logs">
-			{
-				sortLogsByDate.map((log) => 
-					<LogItem title={log.frontmatter.title} tags={log.frontmatter.tags} linkUrl={log.url} date={log.frontmatter.date} />
-				)
-			}
+			<GetLogs category=""/>
 		</div>
 		<!-- /.logs -->
 	</div>
