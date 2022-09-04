@@ -24,6 +24,7 @@ const { title, cannonical, description } = Astro.props as Props;
 		<link rel="cannonical" href={ cannonical || Astro.url.href} >
 		<meta name="description" content={description}>
 		<meta name="robots" content="index">
+		<meta name="google-site-verification" content="5AnKgC1eGZwLB-7QGAaEhI7Q0U_sYmQ9mpduIzccpgI" />
 		<script is:inline>
 			if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
 				localStorage.theme = 'dark';
@@ -141,7 +142,7 @@ const { title, cannonical, description } = Astro.props as Props;
 	
 	h1,h2,h3,h4,h5,h6 {
 		font-family:var(--font-body);
-		font-weight:600;
+		font-weight:700 !important;
 		line-height:1.6;
 	}
 	
