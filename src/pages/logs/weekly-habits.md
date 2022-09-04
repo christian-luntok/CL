@@ -13,7 +13,7 @@ Weekly habits huh? I'm not sure how I got here but I usually have a hard time ma
 Recently I've been trying to develop and maintain the habits below:
 
 - Make Daily Commits
-- Reading 5 pages of a book (Currently slo  wly and surely making my way through <i>Red Queen</i> by Victoria Aveyard)
+- Reading 5 pages of a book (Currently slowly and surely making my way through <i>Red Queen</i> by Victoria Aveyard)
 - Make a log post. (Like this one)
 - Make a [techincal log post](/playground).
 
@@ -23,7 +23,7 @@ I'm trying to do a daily commit to establish discipine on me actually trying to 
 
 And making technical log post, pushes and put pressure me to actually try and make lists of programming posts that I would like to make.
 
-Having to read 5 pages a day, the small amount of reading that I think I get done <i>most days</i>? Keeping it ridiculously simple makes it much harder to come up with an excuse not to do it. It's not a ridiculous amount of pages but it makes me conscioulsy take time to sit down, pick the book and get started. 
+Having to read 5 pages a day, the small amount of reading that I think I get done <i>most days</i>? Keeping it ridiculously simple makes it much harder to come up with an excuse not to do it. It's not a ridiculous amount of pages but it makes me consciously take time to sit down, pick the book and get started. 
 
 Though even then it's still a little hard to accomplish daily. But I'm still on the stage of making small progress towards building that habit.
 
