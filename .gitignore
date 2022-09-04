@@ -1,6 +1,7 @@
 # build output
 dist/
 .output/
+.vscode/
 
 # dependencies
 node_modules/
