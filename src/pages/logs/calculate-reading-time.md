@@ -37,6 +37,6 @@ calculateReadingTime();
 
 This function gets the all the characters within your content container, which you'll need to count how many words there are in the content. 
 
-After that you'll have to divide the content based on the average words per minute of an adult. [(based it on this study)](https://www.sciencedirect.com/science/article/abs/pii/S0749596X19300786#:~:text=Abstract,and%20260%20wpm%20for%20fiction.)
+After that you'll have to divide the content based on the average words per minute of an adult [(based it on this study)](https://www.sciencedirect.com/science/article/abs/pii/S0749596X19300786#:~:text=Abstract,and%20260%20wpm%20for%20fiction.). And that should be it! 
 
 
