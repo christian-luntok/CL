@@ -12,19 +12,31 @@ I always see these "<strong>x</strong> min read" reading time on articles I see 
 
 It took me a while to figure out how to do this but here's a quick function on how you can do these too!
 
-```   function calculateReadingTime() {
-        // Gets the article class container containing the content.
-        const content = document.getElementById("logs-container").innerText;
+<br>
 
-        // Average adult words per minute.
-        const avgWpm = 225; 
+```js   
+function calculateReadingTime() {
+    // Gets the article class container containing the content.
+    const content = document.getElementById("logs-container").innerText;
 
-        // Count the words for the content
-        const words = content.trim().split(/\s+/).length;
+    // Average adult words per minute.
+    const avgWpm = 238; 
 
-        // Calculate total time takes to read the content based on the average words per minute of an adult.
-        const totalTime = Math.ceil(words / avgWpm);
-        
-        document.getElementById("time-container").innerText = totalTime + " min read";
-    }
-    calculateReadingTime();
+    // Count the words for the content
+    const words = content.trim().split(/\s+/).length;
+
+    // Calculate total time takes to read the content based on the average words per minute of an adult.
+    const totalTime = Math.ceil(words / avgWpm);
+    
+    document.getElementById("time-container").innerText = totalTime + " min read";
+}
+
+calculateReadingTime();
+```
+<br>
+
+This function gets the all the characters within your content container, which you'll need to count how many words there are in the content. 
+
+After that you'll have to divide the content based on the average words per minute of an adult. [(based it on this study)](https://www.sciencedirect.com/science/article/abs/pii/S0749596X19300786#:~:text=Abstract,and%20260%20wpm%20for%20fiction.)
+
+

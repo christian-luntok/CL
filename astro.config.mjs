@@ -10,7 +10,6 @@ export default defineConfig({
     config: {}
   }), sitemap()],
   markdown: {
-    // Can be 'shiki' (default), 'prism' or false to disable highlighting
     syntaxHighlight: 'prism',
   },
   vite: {
