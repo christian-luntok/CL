@@ -24,6 +24,7 @@
      -moz-hyphens: none;
      -ms-hyphens: none;
      hyphens: none;
+     font-size: .875rem;
  }
  
  /* Code blocks */
