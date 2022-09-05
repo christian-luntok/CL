@@ -21,6 +21,7 @@ const { title, cannonical, description } = Astro.props as Props;
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/styles/atom-dark.css">
 		<link rel="cannonical" href={ cannonical || Astro.url.href} >
 		<meta name="description" content={description}>
 		<meta name="robots" content="index">
@@ -59,7 +60,6 @@ const { title, cannonical, description } = Astro.props as Props;
 <style lang="scss" is:global>
 	@use '../styles/reset.scss' as *;
 	@use '../styles/mixin.scss' as *;
-	@import  '../../node_modules/locomotive-scroll/src/locomotive-scroll.scss';
 	:root {
 		color-scheme: dark light;
 		--font-size-base: 16px;
@@ -132,13 +132,7 @@ const { title, cannonical, description } = Astro.props as Props;
 		}
 	}
 
-	code {
-		padding: rem(2) rem(4);
-		background: var(--color-bg);
-		color: var(--brand-color-1);
-		border-radius: rem(4);
-		font-weight:700;
-	}
+
 	
 	h1,h2,h3,h4,h5,h6 {
 		font-family:var(--font-body);
@@ -164,16 +158,16 @@ const { title, cannonical, description } = Astro.props as Props;
 	h6, .h6 {
 		font-size: var(--font-size-base);
 	}
+
+
 	.content {
+
 		font-family: var(--font-body);
 		h1, h2, h3, h4, h5, h6 {
 			font-family: inherit;
 			font-size:revert;
 		}
-	}
 
-
-	.content {
 		a {
 			text-decoration: underline;
 			font-weight:600;
@@ -182,6 +176,13 @@ const { title, cannonical, description } = Astro.props as Props;
         p {
 			font-size:16px;
             margin:rem(16) 0;
+			code {
+				padding: rem(2) rem(4);
+				background: var(--color-bg);
+				color: var(--brand-color-1);
+				border-radius: rem(4);
+				font-weight:700;
+			}
         }
 		img {
 			border-radius: rem(8);

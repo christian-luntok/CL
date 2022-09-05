@@ -9,6 +9,10 @@ export default defineConfig({
   integrations: [tailwind({
     config: {}
   }), sitemap()],
+  markdown: {
+    // Can be 'shiki' (default), 'prism' or false to disable highlighting
+    syntaxHighlight: 'prism',
+  },
   vite: {
     ssr: {
       external: ["svgo"]
