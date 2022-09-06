@@ -10,7 +10,7 @@ tags: Playground, JS
 
 I always see these "<strong>x</strong> min read" reading time on articles I see within the net. 
 
-It took me a while to figure out how to do this but here's a quick function on how you can do these too!
+Here's a quick function on how you can do these too!
 
 <br>
 
