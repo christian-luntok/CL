@@ -2,10 +2,9 @@
 import Layout from '@layouts/MainLayout.astro';
 import PostTitle from '@partials/PostTitle.astro';
 import TagsList from '@partials/TagsList.astro';
-import { Prism } from '@astrojs/prism';
 
+const { readingTime } = Astro.props.frontmatter;  
 const { frontmatter } = Astro.props;
-
 const tags = frontmatter.tags.split(', ');
 
 ---
@@ -18,7 +17,7 @@ const tags = frontmatter.tags.split(', ');
         <div class="log-details mb-8">
             <span class="inline-block text-sm text-grey dark:text-white">{frontmatter.date}</span> 
             <span class="mx-2 text-grey dark:text-white">•</span>
-            <span id="time-container" class="inline-block text-sm text-grey dark:text-white"></span>
+            <span id="time-container" class="inline-block text-sm text-grey dark:text-white">{readingTime}</span>
         </div>
         <!-- /.log-details -->
 
