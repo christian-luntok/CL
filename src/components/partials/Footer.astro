@@ -19,10 +19,10 @@ const { linkedin_link, github_link } = Astro.props as Props;
         </div>
         <!-- /.flex flex-col space-y-4 -->
         <div class="button-wrapper flex flex-wrap justify-start sm:justify-end">
-            <a target="_blank" href={github_link} class="text-grey dark:text-grey-200 w-9 h-9 rounded-md bg-grey-100/30 hover:bg-grey-100 dark:bg-grey-600 flex items-center justify-center hover:ring-2 dark:hover:bg-grey-200/30 ring-grey dark:ring-grey-100 dark:hover:ring-grey-200/80 transition-all duration-300 ease-in-out">
+            <a target="_blank" href={github_link} aria-label="Github" class="text-grey dark:text-grey-200 w-9 h-9 rounded-md bg-grey-100/30 hover:bg-grey-100 dark:bg-grey-600 flex items-center justify-center hover:ring-2 dark:hover:bg-grey-200/30 ring-grey dark:ring-grey-100 dark:hover:ring-grey-200/80 transition-all duration-300 ease-in-out">
                 <Icon name="fe:github-alt" class="w-6 h-6 fill-grey dark:fill-grey-200" />
             </a>
-            <a target="_blank" href={linkedin_link} class="text-grey dark:text-grey-200 w-9 h-9 rounded-md bg-grey-100/30 hover:bg-grey-100 dark:bg-grey-600 flex items-center justify-center hover:ring-2 dark:hover:bg-grey-200/30 ring-grey dark:ring-grey-100 dark:hover:ring-grey-200/80 transition-all duration-300 ease-in-out ml-2">
+            <a target="_blank" href={linkedin_link} aria-label="LinkedIn" class="text-grey dark:text-grey-200 w-9 h-9 rounded-md bg-grey-100/30 hover:bg-grey-100 dark:bg-grey-600 flex items-center justify-center hover:ring-2 dark:hover:bg-grey-200/30 ring-grey dark:ring-grey-100 dark:hover:ring-grey-200/80 transition-all duration-300 ease-in-out ml-2">
                 <Icon name="ri:linkedin-fill" class="w-6 h-6 fill-grey dark:fill-grey-200" />
             </a>
         </div>
