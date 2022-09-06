@@ -36,6 +36,9 @@ const { title, cannonical, description } = Astro.props as Props;
   		</script>
 	</head>
 	<body class="bg-white dark:bg-grey-900 text-black dark:text-white transition duration-300">
+		<a href="#main" class="sr-only focus:not-sr-only block w-100 text-white text-center py-4 bg-[#d82456] skiplink">
+			<span>Skip to Content</span>
+		</a>
 		<Header />
 		<main id="main" class="m-auto mx-0">
 			<slot />
