@@ -18,7 +18,7 @@ For example, here's how you can add a label for an element, a button or a link c
 <!-- Adding a label for an H1 logo -->
 <h1>
     <svg><!-- SVG LOGO GOES HERE--></svg>
-    <span class="sr">The Name of the website</span>
+    <span class="sr-only">The Name of the website</span>
 </h1>
 
 <!-- Adding a label for button with an icon -->
