@@ -1,0 +1,64 @@
+---
+export interface Props {
+	title: string;
+	cannonical: string;
+	description: string;
+}
+
+const { title, cannonical, description } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		<style data-href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+			@font-face{ /*cyrillic-ext*/@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggqxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;}/*cyrillic*/@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggOxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}/*greek*/@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggSxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0370-03FF;}/*vietnamese*/@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggixSvfedN62Zw.woff2)format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB;}/*latin-ext*/@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggmxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}/*latin*/@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggexSvfedN4.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}/*cyrillic-ext*/@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggqxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;}/*cyrillic*/@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggOxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}/*greek*/@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggSxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0370-03FF;}/*vietnamese*/@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggixSvfedN62Zw.woff2)format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB;}/*latin-ext*/@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggmxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}/*latin*/@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggexSvfedN4.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}/*cyrillic-ext*/@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggqxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;}/*cyrillic*/@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggOxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}/*greek*/@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggSxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0370-03FF;}/*vietnamese*/@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggixSvfedN62Zw.woff2)format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB;}/*latin-ext*/@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggmxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}/*latin*/@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggexSvfedN4.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}/*cyrillic-ext*/@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggqxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;}/*cyrillic*/@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggOxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}/*greek*/@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggSxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0370-03FF;}/*vietnamese*/@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggixSvfedN62Zw.woff2)format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB;}/*latin-ext*/@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggmxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}/*latin*/@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggexSvfedN4.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}/*cyrillic-ext*/@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggqxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;}/*cyrillic*/@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggOxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}/*greek*/@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggSxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0370-03FF;}/*vietnamese*/@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggixSvfedN62Zw.woff2)format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB;}/*latin-ext*/@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggmxSvfedN62Zw.woff2)format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}/*latin*/@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/manrope/v13/xn7gYHE41ni1AdIRggexSvfedN4.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;} }
+		</style>
+		<link rel="stylesheet" href="/styles/atom-dark.css">
+		<link rel="cannonical" href={ cannonical || Astro.url.href} >
+		<meta name="description" content={description}>
+		<meta name="robots" content="index">
+		<meta name="google-site-verification" content="5AnKgC1eGZwLB-7QGAaEhI7Q0U_sYmQ9mpduIzccpgI" />
+		<script is:inline>
+			if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+				localStorage.theme = 'dark';
+				document.documentElement.classList.add('dark');
+			} else {
+				localStorage.theme = 'light'
+			}
+  		</script>
+	</head>
+	<body class="">
+		<a href="#main" class="sr-only focus:not-sr-only block w-100 text-white text-center py-4 bg-[#d82456]">
+			<span>Skip to Content</span>
+		</a>
+		<main id="main" class="m-auto mx-0">
+			<slot />
+		</main>
+		<script src="/script/general.js" is:inline type="module"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146484397-1"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-146484397-1');
+		</script>
+	</body>
+</html>
+
+<style lang="scss" is:global>
+	@use '../styles/reset.scss' as *;
+	@use '../styles/mixin.scss' as *;
+	:root {
+    }
+</style>
