@@ -1,0 +1,206 @@
+---
+import Layout from '@layouts/PlaygroundLayout.astro';
+import { Icon } from 'astro-icon';
+---
+
+<Layout title="CL - Playgounr Dribble #1" font_href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;600;700;900&display=swap" description="A Playground for recreating dribbble designs. This is Playground Dribble #1.">
+    <section class="playground-wrap bg-[color:var(--color-secondary)]">
+        <header class="full wrapper border-b-2 border-[color:var(--color-primary)]">
+            <div class="flex justify-between py-4">
+                <button class="menu">
+                    <Icon name="cil:hamburger-menu" class="w-10 h-10 fill-[color:var(--color-primary)]" />
+                </button>
+                <!-- /.menu -->
+                <button class="search">
+                    <Icon name="akar-icons:search" class="w-6 h-6 fill-[color:var(--color-primary)]" />
+                </button>
+                <!-- /.search -->
+            </div>
+            <!-- /.flex justify-between py-4 -->
+        </header>
+        <!-- /.flex justify-between py-4 -->
+        <div class="title wrapper border-b-2 border-[color:var(--color-primary)]">
+            <div class="title-container text-center py-4 md:py-1 leading-none">
+                <h1 class="w-full font-bold">IDENTIFONT</h1>
+            </div>
+            <!-- /.title-container -->
+        </div>
+        <!-- /.title -->
+        <div class="tiles grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
+            <div class="tile-item py-8 md:pt-8 md:pb-6 px-8 border-[color:var(--color-primary)]">
+                <div class="link mb-12 text-lg">
+                    <a href="#" class="flex justify-between full">By Appearance
+                        <Icon name="cil:arrow-right" class="w-6 h-6 fill-[color:var(--color-primary)]" />
+                    </a>
+                </div>
+                <!-- /.link -->
+                <i class="icon block">
+                    <Icon name="emojione-monotone:eight-pointed-star" class="w-20 h-20 fill-[color:var(--color-primary)]" />
+                </i>
+                <div class="content block mt-4">
+                    <p>Identify a font by answering questions about key features.</p>
+                </div>
+                <!-- /.content block -->
+            </div>
+            <div class="tile-item py-8 md:pt-8 md:pb-6 px-8 border-[color:var(--color-primary)]">
+                <div class="link mb-12 text-lg">
+                    <a href="#" class="flex justify-between full">By Similarity
+                        <Icon name="cil:arrow-right" class="w-6 h-6 fill-[color:var(--color-primary)]" />
+                    </a>
+                </div>
+                <!-- /.link -->
+                <i class="icon block">
+                    <Icon name="simple-icons:mastercard" class="w-20 h-20 fill-[color:var(--color-primary)]" />
+                </i>
+                <div class="content block mt-4">
+                    <p>Find fonts that are similar in appearance to a specific font.</p>
+                </div>
+                <!-- /.content block -->
+            </div>
+            <div class="tile-item py-8 md:pt-8 md:pb-6 px-8 border-[color:var(--color-primary)]">
+                <div class="link mb-12 text-lg">
+                    <a href="#" class="flex justify-between full">By Year
+                        <Icon name="cil:arrow-right" class="w-6 h-6 fill-[color:var(--color-primary)]" />
+                    </a>
+                </div>
+                <!-- /.link -->
+                <i class="icon block">
+                    <Icon name="bi:grid-3x2-gap-fill" class="w-20 h-20 fill-[color:var(--color-primary)]" />
+                </i>
+                <div class="content block mt-4">
+                    <p>Sort and find fonts by year of their creation. Best way to visualize the number of fonts here.</p>
+                </div>
+                <!-- /.content block -->
+            </div>
+            <div class="tile-item py-8 md:pt-8 md:pb-6 px-8 border-[color:var(--color-primary)]">
+                <div class="link mb-12 text-lg">
+                    <a href="#" class="flex justify-between w-full break-all">
+                        By Designer
+                        <Icon name="cil:arrow-right" class="w-6 h-6 fill-[color:var(--color-primary)]" />
+                    </a>
+                </div>
+                <!-- /.link -->
+                <i class="icon block">
+                    <Icon name="icomoon-free:pencil2" class="w-20 h-20 fill-[color:var(--color-primary)]" />
+                </i>
+                <div class="content block mt-4">
+                    <p>Find a font if you know the designer or publisher.</p>
+                </div>
+                <!-- /.content block -->
+            </div>
+        </div>
+        <!-- /.grid grid-cols-4 gap-0 -->
+
+        <div class="tiles grid grid-cols-1 md:grid-cols-2 gap-0">
+            <div class="tile-item py-24 px-8">
+                <h2 class="h2 text-3xl font-medium mb-4">Latest font inclusions</h2>
+                <div class="details font-medium grid lg:grid-cols-3 2xl:grid-cols-4">
+                    <span class="text-xs mb-2 lg:md-0 uppercase date 2xl:col-span-2">DECEMBER 2020</span>
+                    <span class="text-xs mb-2 lg:md-0 uppercase">34 Typefaces</span>
+                    <span class="text-xs uppercase inline-flex text-left">Curated By A. Malley</span>
+                </div>
+                <!-- /.details -->
+                <div class="content mt-8">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem alias, praesentium est similique doloribus deserunt cum libero sed tempore earum, quas dolorem reiciendis veniam iusto ipsa id veritatis maxime suscipit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui consequatur, soluta culpa nisi tempore iure mollitia quae in voluptatum recusandae totam corrupti dolores assumenda distinctio suscipit fuga voluptatibus explicabo modi.</p> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nam est nostrum ex dolor asperiores tempora. Omnis quidem inventore, assumenda voluptate corporis reprehenderit id voluptatibus dolore, saepe provident, amet facere.</p>
+                </div>
+                <!-- /.content mt-8 -->
+            </div>
+            <div class="tile-item py-24 px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                    <div class="col-span-2">
+                        <h2 class="h2 text-3xl font-medium mb-4">Recently Added</h2>
+                        <div class="font mt-8 mb-2 lg:mb-0">
+                            <span class="font-title text-4xl font-digestive leading-none block">DIGESTIVE</span>
+                        </div>
+                        <!-- /.font -->
+                    </div>
+                    <div class="text-right flex items-center justify-between flex-col">
+                        <span class="block uppercase w-full text-xs mb-2 lg:md-0 text-left lg:text-right">27 12 2020</span>
+                        <span class="block uppercase w-full text-xs mb-2 lg:md-0 text-left lg:text-right">Designed By James Edmonon</span>
+                        <span class="block uppercase w-full text-xs text-left lg:text-right">Oh no type</span>
+                    </div>
+                </div>
+                <!-- /.grid grid-cols-1 md:grid-cols-3 -->
+
+            </div>
+        </div>
+        <!-- /.tiles grid grid-cols-2 gap-0 -->
+    </section> 
+</Layout>
+
+<style lang="scss">
+	@use '../../styles/mixin.scss' as *;
+
+    @font-face { font-family: "Digestive zero"; src: url("//db.onlinewebfonts.com/t/90b5969d566126e65d4c891c3f32c7cd.eot"); src: url("//db.onlinewebfonts.com/t/90b5969d566126e65d4c891c3f32c7cd.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/90b5969d566126e65d4c891c3f32c7cd.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/90b5969d566126e65d4c891c3f32c7cd.woff") format("woff"), url("//db.onlinewebfonts.com/t/90b5969d566126e65d4c891c3f32c7cd.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/90b5969d566126e65d4c891c3f32c7cd.svg#Digestive zero") format("svg"); }
+    
+    .font-digestive {
+        font-family: "Digestive zero";
+    }
+
+    .font-title {
+        font-size:15vw;
+    }
+    :root {
+        --color-primary: #0e0e0e;
+        --color-secondary: #d5d1c4;
+    }
+    .playground-wrap {
+        min-height:100vh;
+        background: var(--color-secondary);
+    }
+    .content {
+        p {
+            &:not(:last-child) {
+                margin-bottom:rem(16);
+            }
+        }
+    }
+    .tiles {
+        .tile-item {
+            border: 2px solid var(--color-primary);
+            border-top:0;
+            border-left:0;
+            border-right:0;
+            @screen md {
+                &:nth-child(odd) {
+                    border-right: 2px solid var(--color-primary);
+                }
+            }
+            @screen lg {
+                border-top:0;
+                border-left:0;
+                border-right: 2px solid var(--color-primary);
+            }
+            &:last-child {
+                @screen md {
+                    border-right:0;
+                }
+            }
+        }
+        .link {
+            text-transform: uppercase;
+            a {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .wrapper {
+        max-width: 100%;
+        padding: 0 rem(32);
+    }
+
+    .title {
+        .title-container {
+            h1 {
+                font-size:14vw;
+                @screen lg {
+                    font-size:16vw;
+                }
+            }
+        }
+    }
+
+</style>
