@@ -45,8 +45,8 @@ import { Icon } from 'astro-icon';
         </header>
         <!-- /.full wrapper -->
         <div class="title my-32 ">
-            <div class="title-container tracking-[-0.7rem] text-center py-4 md:py-1 leading-none">
-                <h1 class="w-full font-black text-[color:var(--color-primary)]">FRUIT BASES</h1>
+            <div class="title-container tracking-[-0.7rem] text-center py-4 md:py-1 wrapper">
+                <h1 class="w-full leading-none tracking-none font-black text-[color:var(--color-primary)]">FRUIT BASES</h1>
             </div>
             <!-- /.title-container -->
         </div>
@@ -238,6 +238,9 @@ import { Icon } from 'astro-icon';
                 transform:scaleY(1.75);
                 @screen lg {
                     font-size:15vw;
+                }
+                @screen xl {
+                    font-size: rem(208);
                 }
             }
         }
