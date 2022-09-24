@@ -1,0 +1,136 @@
+---
+import Layout from '@layouts/PlaygroundLayout.astro';
+import { Icon } from 'astro-icon';
+---
+
+<Layout title="CL - Playground Dribble #2" font_href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" description="A Playground for making dribbble designs to an actual webpage. This is Playground Dribble #2.">
+    <section class="playground-wrap bg-white color-[color:var(--color-body)]">
+        <header class="full wrapper">
+            <div class="grid grid-cols-6 py-4 items-center">
+                <div class="logo w-20">
+                    <h1>
+                        <img src="/assets/img/cl-face.png" alt="Logo">
+                    </h1>
+                </div>
+                <!-- /.logo -->
+                <div class=" col-span-5 flex justify-between">
+                    <nav class="menu flex">
+                        <div class="container text-[#6b6c69] flex flex-wrap justify-start uppercase items-center space-x-12 font-semibold">
+                            <a href="">About</a>
+                            <a href="">Advantages</a>
+                            <a href="">Top Products</a>
+                            <a href="">Cocktail Recipes</a>
+                        </div>
+                        <!-- /.container flex flex-wrap justify-between -->
+                    </nav>
+                    <!-- /.menu -->
+                    <div class="button-container inline-flex space-x-4">
+                        <a href="/" class="inline-flex items-center border-2 border-grey-100 text-[color:var(--color-body)] py-1 px-2 rounded-full uppercase">
+                            <Icon name="emojione:flag-for-heard-and-mcdonald-islands" class="w-6 h-6 mr-1 fill-[color:var(--color-primary)]" />
+                            Eng
+                            <Icon name="eva:arrow-ios-downward-fill" class="w-4 font-bold h-6 mr-1 fill-[color:var(--color-primary)]" />
+                        </a>
+                        <a href="/" class="border-2 border-grey-100 text-[color:var(--color-primary)] py-2 px-6 rounded-full uppercase">
+                            Contact Us
+                        </a>
+                    </div>
+                    <!-- /.button-container -->
+                </div>
+            </div>
+            <!-- /.flex -->
+        </header>
+        <!-- /.full wrapper -->
+        <div class="title my-16">
+            <div class="wrapper title-container tracking-[-0.7rem] text-center py-4 md:py-1 leading-none">
+                <h1 class="w-full font-black text-[color:var(--color-primary)]">FRUIT BASES</h1>
+            </div>
+            <!-- /.title-container -->
+        </div>
+    </section> 
+</Layout>
+
+<style lang="scss">
+	@use '../../styles/mixin.scss' as *;
+    
+    .font-title {
+        font-size:15vw;
+    }
+
+    :root {
+        --color-primary: #0718e4;
+        --color-secondary: #cb4a8a;
+        --color-body: #494a47;
+    }
+    a {
+        font-weight:600;
+    }
+    .playground-wrap {
+        min-height:100vh;
+    }
+    .content {
+        p {
+            &:not(:last-child) {
+                margin-bottom:rem(16);
+            }
+        }
+    }
+    nav {
+        &.menu {
+            font-size:rem(12);
+        }
+    }
+    .button-container {
+        a {
+            font-size:rem(12);
+        }
+    }
+    .tiles {
+        .tile-item {
+            border: 2px solid var(--color-primary);
+            border-top:0;
+            border-left:0;
+            border-right:0;
+            @screen md {
+                &:nth-child(odd) {
+                    border-right: 2px solid var(--color-primary);
+                }
+            }
+            @screen lg {
+                border-top:0;
+                border-left:0;
+                border-right: 2px solid var(--color-primary);
+            }
+            &:last-child {
+                @screen md {
+                    border-right:0;
+                }
+            }
+        }
+        .link {
+            text-transform: uppercase;
+            a {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .wrapper {
+        max-width: 1350px;
+        width:100%;
+        margin:0 auto;
+        padding: 0 rem(32);
+    }
+
+    .title {
+        .title-container {
+            h1 {
+                font-size:14vw;
+                transform:scaleY(1.75);
+                @screen lg {
+                    font-size:15vw;
+                }
+            }
+        }
+    }
+
+</style>
