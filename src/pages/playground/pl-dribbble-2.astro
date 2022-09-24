@@ -17,9 +17,9 @@ import { Icon } from 'astro-icon';
                     </h1>
                 </div>
                 <!-- /.logo -->
-                <div class=" col-span-5 flex justify-between">
-                    <nav class="menu flex">
-                        <div class="container text-[#6b6c69] flex flex-wrap justify-start uppercase items-center space-x-12 font-semibold">
+                <div class=" col-span-5 flex justify-end lg:justify-between">
+                    <nav class="menu hidden lg:flex">
+                        <div class="container text-[#6b6c69] flex flex-wrap justify-start uppercase items-center space-x-0 md:space-x-12 font-semibold">
                             <a href="">About</a>
                             <a href="">Advantages</a>
                             <a href="">Top Products</a>
@@ -44,8 +44,8 @@ import { Icon } from 'astro-icon';
             <!-- /.flex -->
         </header>
         <!-- /.full wrapper -->
-        <div class="title my-32 ">
-            <div class="title-container tracking-[-0.7rem] text-center py-4 md:py-1 wrapper">
+        <div class="title mt-16 md:mt-24 md:mb-24 lg:mb-48 ">
+            <div class="title-container lg:tracking-[-0.7rem] text-center py-4 md:py-1 wrapper">
                 <h1 class="w-full leading-none tracking-none font-black text-[color:var(--color-primary)]">FRUIT BASES</h1>
             </div>
             <!-- /.title-container -->
@@ -56,12 +56,12 @@ import { Icon } from 'astro-icon';
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slider-content">
-                            <h3 class="mb-2 text-xl font-semibold">Sweet Banana</h3>
+                            <h3 class="mb-2 text-md md:text-xl font-semibold">Sweet Banana</h3>
                             <figure class="flex featured-image bg-[color:var(--color-secondary)] mb-2">
                                 <img src="/assets/img/pl-dribbble-2/drink1.jpg" alt="">
                             </figure>
                             <!-- /.featured-image -->
-                            <div class="content w-60">
+                            <div class="content w-36 sm:w-48 md:w-60">
                                 <p>Sweet banana - absolutely popular taste!</p>
                             </div>
                             <!-- /.content -->
@@ -70,12 +70,12 @@ import { Icon } from 'astro-icon';
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-content">
-                            <h3 class="mb-2 text-xl font-semibold">Sweet Payaya</h3>
+                            <h3 class="mb-2 text-md md:text-xl font-semibold">Sweet Payaya</h3>
                             <figure class="flex featured-image bg-[color:var(--color-secondary)] mb-2">
                                 <img src="/assets/img/pl-dribbble-2/drink3.jpg" alt="">
                             </figure>
                             <!-- /.featured-image -->
-                            <div class="content w-60">
+                            <div class="content w-36 sm:w-48 md:w-60">
                                 <p>Excellent combination for summer cocktails!</p>
                             </div>
                             <!-- /.content -->
@@ -84,12 +84,12 @@ import { Icon } from 'astro-icon';
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-content">
-                            <h3 class="mb-2 text-xl font-semibold">Sweet Pineapple</h3>
+                            <h3 class="mb-2 text-md md:text-xl font-semibold">Sweet Pineapple</h3>
                             <figure class="flex featured-image bg-[color:var(--color-secondary)] mb-2">
                                 <img src="/assets/img/pl-dribbble-2/drink2.jpg" alt="">
                             </figure>
                             <!-- /.featured-image -->
-                            <div class="content w-60">
+                            <div class="content w-36 sm:w-48 md:w-60">
                                 <p>Sweet and sour combination of exotic fruits!</p>
                             </div>
                             <!-- /.content -->
@@ -98,12 +98,12 @@ import { Icon } from 'astro-icon';
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-content">
-                            <h3 class="mb-2 text-xl font-semibold">Pitted Passionfruit</h3>
+                            <h3 class="mb-2 text-md md:text-xl font-semibold">Pitted Passionfruit</h3>
                             <figure class="flex featured-image bg-[color:var(--color-secondary)] mb-2">
                                 <img src="/assets/img/pl-dribbble-2/drink4.jpg" alt="">
                             </figure>
                             <!-- /.featured-image -->
-                            <div class="content w-60">
+                            <div class="content w-36 sm:w-48 md:w-60">
                                 <p>The real Mojito with excellent mint extract!</p>
                             </div>
                             <!-- /.content -->
@@ -134,6 +134,20 @@ import { Icon } from 'astro-icon';
         autoplay: {
             delay: 2000
         },
+        breakpoints: {
+            320: {
+                slidesPerView: 2
+            },
+            480: {
+                slidesPerView: 3
+            },
+            640: {
+                slidesPerView: 3
+            },
+            800: {
+                slidesPerView: 4
+            }
+        }
     });
 </script>
 <style lang="scss">
