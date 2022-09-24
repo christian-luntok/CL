@@ -4,7 +4,11 @@ import { Icon } from 'astro-icon';
 ---
 
 <Layout title="CL - Playground Dribble #2" font_href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" description="A Playground for making dribbble designs to an actual webpage. This is Playground Dribble #2.">
-    <section class="playground-wrap bg-white color-[color:var(--color-body)]">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <section class="playground-wrap bg-[#efede9] color-[color:var(--color-body)]">
         <header class="full wrapper">
             <div class="grid grid-cols-6 py-4 items-center">
                 <div class="logo w-20">
@@ -26,7 +30,7 @@ import { Icon } from 'astro-icon';
                     <!-- /.menu -->
                     <div class="button-container inline-flex space-x-4">
                         <a href="/" class="inline-flex items-center border-2 border-grey-100 text-[color:var(--color-body)] py-1 px-2 rounded-full uppercase">
-                            <Icon name="emojione:flag-for-heard-and-mcdonald-islands" class="w-6 h-6 mr-1 fill-[color:var(--color-primary)]" />
+                            <Icon name="emojione:flag-for-australia" class="w-6 h-6 mr-1 fill-[color:var(--color-primary)]" />
                             Eng
                             <Icon name="eva:arrow-ios-downward-fill" class="w-4 font-bold h-6 mr-1 fill-[color:var(--color-primary)]" />
                         </a>
@@ -40,18 +44,52 @@ import { Icon } from 'astro-icon';
             <!-- /.flex -->
         </header>
         <!-- /.full wrapper -->
-        <div class="title my-16">
-            <div class="wrapper title-container tracking-[-0.7rem] text-center py-4 md:py-1 leading-none">
+        <div class="title my-32 ">
+            <div class="title-container tracking-[-0.7rem] text-center py-4 md:py-1 leading-none">
                 <h1 class="w-full font-black text-[color:var(--color-primary)]">FRUIT BASES</h1>
             </div>
             <!-- /.title-container -->
         </div>
+        
+        <div class="tile-slider">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider-content">
+                            <h3 class="mb-2 text-xl font-semibold">Sweet Pineapple</h3>
+                            <div class="featured-image w-100 h-96 bg-[color:var(--color-secondary)] ">
+                                <figure>
+                                    <img src="" alt="">
+                                </figure>
+                            </div>
+                            <!-- /.featured-image -->
+                        </div>
+                        <!-- /.slider-content -->
+                    </div>
+                </div>
+                <!-- /.swiper-wrapper -->
+
+            </div>
+            <!-- /.flex flex-wrap -->
+        </div>
+        <!-- /.tile-slider -->
     </section> 
 </Layout>
-
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 8,
+    });
+</script>
 <style lang="scss">
 	@use '../../styles/mixin.scss' as *;
-    
+    .swiper-slide {
+        .slider-content {
+            color: var(--color-body);
+        }
+    }
     .font-title {
         font-size:15vw;
     }
