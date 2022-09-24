@@ -8,7 +8,7 @@ import { Icon } from 'astro-icon';
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <section class="playground-wrap bg-[#efede9] color-[color:var(--color-body)]">
+    <section class="playground-wrap bg-[#efede9] pb-32 color-[color:var(--color-body)] overflow-hidden">
         <header class="full wrapper">
             <div class="grid grid-cols-6 py-4 items-center">
                 <div class="logo w-20">
@@ -51,18 +51,62 @@ import { Icon } from 'astro-icon';
             <!-- /.title-container -->
         </div>
         
-        <div class="tile-slider">
-            <div class="swiper">
+        <div class="tile-slider py-24">
+            <div class="swiper wrapper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slider-content">
-                            <h3 class="mb-2 text-xl font-semibold">Sweet Pineapple</h3>
-                            <div class="featured-image w-100 h-96 bg-[color:var(--color-secondary)] ">
-                                <figure>
-                                    <img src="" alt="">
-                                </figure>
-                            </div>
+                            <h3 class="mb-2 text-xl font-semibold">Sweet Banana</h3>
+                            <figure class="flex featured-image bg-[color:var(--color-secondary)] mb-2">
+                                <img src="/assets/img/pl-dribbble-2/drink1.jpg" alt="">
+                            </figure>
                             <!-- /.featured-image -->
+                            <div class="content w-60">
+                                <p>Sweet banana - absolutely popular taste!</p>
+                            </div>
+                            <!-- /.content -->
+                        </div>
+                        <!-- /.slider-content -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-content">
+                            <h3 class="mb-2 text-xl font-semibold">Sweet Payaya</h3>
+                            <figure class="flex featured-image bg-[color:var(--color-secondary)] mb-2">
+                                <img src="/assets/img/pl-dribbble-2/drink3.jpg" alt="">
+                            </figure>
+                            <!-- /.featured-image -->
+                            <div class="content w-60">
+                                <p>Excellent combination for summer cocktails!</p>
+                            </div>
+                            <!-- /.content -->
+                        </div>
+                        <!-- /.slider-content -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-content">
+                            <h3 class="mb-2 text-xl font-semibold">Sweet Pineapple</h3>
+                            <figure class="flex featured-image bg-[color:var(--color-secondary)] mb-2">
+                                <img src="/assets/img/pl-dribbble-2/drink2.jpg" alt="">
+                            </figure>
+                            <!-- /.featured-image -->
+                            <div class="content w-60">
+                                <p>Sweet and sour combination of exotic fruits!</p>
+                            </div>
+                            <!-- /.content -->
+                        </div>
+                        <!-- /.slider-content -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-content">
+                            <h3 class="mb-2 text-xl font-semibold">Pitted Passionfruit</h3>
+                            <figure class="flex featured-image bg-[color:var(--color-secondary)] mb-2">
+                                <img src="/assets/img/pl-dribbble-2/drink4.jpg" alt="">
+                            </figure>
+                            <!-- /.featured-image -->
+                            <div class="content w-60">
+                                <p>The real Mojito with excellent mint extract!</p>
+                            </div>
+                            <!-- /.content -->
                         </div>
                         <!-- /.slider-content -->
                     </div>
@@ -73,6 +117,12 @@ import { Icon } from 'astro-icon';
             <!-- /.flex flex-wrap -->
         </div>
         <!-- /.tile-slider -->
+        <div class="py-12 text-center">
+            <a href="/" class="text-white bg-[color:var(--color-primary)] py-4 px-8 rounded-full">
+                Back to home
+            </a>
+        </div>
+        <!-- /.py-8 -->
     </section> 
 </Layout>
 <script type="module">
@@ -81,13 +131,35 @@ import { Icon } from 'astro-icon';
         loop: true,
         slidesPerView: 4,
         spaceBetween: 8,
+        autoplay: {
+            delay: 2000
+        },
     });
 </script>
 <style lang="scss">
 	@use '../../styles/mixin.scss' as *;
+
+    .tile-slider {
+        transform:rotate(-5deg) scale(1.03);
+        overflow: hidden;
+    }
+    .swiper {
+        overflow:visible !important;
+    }
+    .swiper-wrapper {
+
+    }
     .swiper-slide {
         .slider-content {
             color: var(--color-body);
+            .featured-image {
+                overflow:hidden;
+                img {
+                    width: 100%;
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+                }
+            }
         }
     }
     .font-title {
