@@ -3,7 +3,7 @@ layout: ../../layouts/PostLayout.astro
 title: Recreating Dribbble Designs No.1
 date: 17 Sept 2022
 compareDate: 17/09/2022
-description: A Playground for making dribbble designs to an actual webpage. Dribble Design 1 commenced and final.
+description: A Playground for making dribbble designs to an actual webpage. Dribble Design 1.
 category: playgrounds
 tags: Playground, HTML, CSS
 ---
