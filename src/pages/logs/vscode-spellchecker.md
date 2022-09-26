@@ -5,7 +5,7 @@ date: 04 Sept 2022
 compareDate: 04/09/2022
 description: Awesome spellcheck extension for your VS Code.
 category: playgrounds
-tags: Playground, VSCode
+tags: Playground
 ---
 
 I wanted to have an inbuilt spell checker within my VS Code when I'm writing my Markdown files. As English is not my first language, I always misspelled words on my logs.

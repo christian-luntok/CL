@@ -5,7 +5,7 @@ date: 31 Aug 2022
 compareDate: 31/08/2022
 description: I have been using Tailwind CSS lately, a css framework for styling websites. I became a really huge fan!
 category: logs
-tags: CSS, TailwindCSS
+tags: Log
 ---
 
 I have been using [Tailwind CSS](https://tailwindcss.com/) lately, a css framework for styling websites. I became a really huge fan!

@@ -5,7 +5,7 @@ date: 12 Sept 2022
 compareDate: 12/09/2022
 description: Customize your fonts in Tailwind with these few tips. 
 category: playgrounds
-tags: Playground, TailwindCSS
+tags: Playground
 ---
 
 Tailwind comes with 3 default font classes, these are <code>.font-serif</code>, <code>.font-sans</code> and <code>.font-mono</code>. Though sometimes you'll need to add your own custom font families, or customize the existing font classes.

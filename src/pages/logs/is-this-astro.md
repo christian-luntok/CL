@@ -5,7 +5,7 @@ date: 26 Aug 2022
 compareDate: 26/08/2022
 description: I recently encountered Astro which is really awesome if I say so myself! I now have used it to make this blog site for random web development logs, css tricks and css/design playgrounds. 
 category: logs
-tags: ASTRO, HTML, CSS, JS
+tags: Log
 ---
 
 #### **Hello everyone!**

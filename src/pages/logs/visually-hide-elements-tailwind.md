@@ -5,7 +5,7 @@ date: 07 Sept 2022
 compareDate: 07/09/2022
 description: How to hide elements visually using Tailwind CSS!
 category: playgrounds
-tags: Playground, TailwindCSS
+tags: Playground
 ---
 
 I just did this to make my "Skip to Content" button work, this is one of those times where you want to make a section of your website visually hidden, but not absolutely hidden for a screen reader that someone with disability would use to browse your site!

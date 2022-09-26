@@ -5,7 +5,7 @@ date: 05 Sept 2022
 compareDate: 05/09/2022
 description: Awesome function you can use to calculate reading time for your blogs
 category: playgrounds
-tags: Playground, JS
+tags: Playground
 ---
 
 I always see these "<strong>x</strong> min read" reading time on articles I see within the net. 

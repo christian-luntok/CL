@@ -5,7 +5,7 @@ date: 25 Sept 2022
 compareDate: 25/09/2022
 description: A Playground for making dribbble designs to an actual webpage. Dribble Design 2.
 category: playgrounds
-tags: Playground, HTML, CSS
+tags: Playground
 ---
 
 Hello!
