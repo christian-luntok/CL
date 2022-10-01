@@ -3,20 +3,70 @@ import Layout from '@layouts/PlaygroundLayout.astro';
 import { Icon } from 'astro-icon';
 ---
 
-<Layout title="CL - Playground Dribble #2" font_href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" description="A Playground for making dribbble designs to an actual webpage. This is Playground Dribble #2.">
+<Layout title="CL - Playground Dribble #3" font_href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" description="A Playground for making dribbble designs to an actual webpage. This is Playground Dribble #3.">
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <section class="playground-wrap bg-[#efede9] color-[color:var(--color-body)] overflow-hidden">
- 
+    <section class="playground-wrap p-8 bg-[color:var(--color-secondary)] color-[color:var(--color-body)] overflow-hidden">
+        <div class="grid grid-cols-2 gap-8">
+            <div class="content-wrap flex flex-wrap flex-col">
+                <header class="flex flex-wrap justify-between items-center bg-[color:var(--color-primary)] p-4 text-[color:var(--color-secondary)] rounded-xl w-full">
+                    <h1 class="font-primary logo text-2xl">woltex</h1>
+                    <nav class="nav-container flex flex-wrap gap-4">
+                        <a href="#" class="flex flex-wrap items-center">My account</a>
+                        <a href="#" class="flex flex-wrap items-center">My Cart <span>[0]</span></a>
+                        <button class="bg-[color:var(--color-secondary)] rounded-xl flex flex-wrap items-center justify-center h-12 w-12">
+                            <Icon id="mobile-menu-burger" name="ci:menu-duo" class="w-5 text-[color:var(--color-primary)] dark:text-[color:var(--color-primary)] fill-[color:var(--color-primary)] dark:fill-[color:var(--color-primary)]" />
+                        </button>
+                    </nav>
+                </header>
+                <div class="content-container mt-auto object-bottom">
+                    <div class="w-4/5">
+                        <span class="tag rounded-full bg-[color:var(--color-yellow)] py-3 px-4 w-auto">Wine Club 2022</span>
+                        <!-- /.tag -->
+                        <h2 class="font-primary font-title leading-none my-8">Critically acclaimed wine.</h2>
+                        <div class="content mb-8">
+                            <p>Don't take our word for it! Delight your loved ones with our selection of 90-point wines from Napa and Sonoma.</p>
+                        </div>
+                        <!-- /.content -->
+                    </div>
+                    <!-- /.w-4 -->
+                    <div class="button-container w-full grid grid-cols-2 gap-4">
+                        <a href="/" class="text-white bg-[color:var(--color-primary)] text-center py-4 px-8 rounded-xl">
+                            Back to home
+                        </a>
+                        <a href="#" class="text-[color:var(--color-primary)] border-solid border-2 bg-[color:var(--color-secondary)] border-[color:var(--color-primary)] text-center rounded-xl py-4 px-8 ">
+                            Shop Now
+                        </a>
+                    </div>
+                    <!-- /.button-container -->
+                </div>
+                <!-- /.main -->
+            </div>
+            <!-- /.content-wrap -->
+            <div class="image-wrap rounded-xl">
+                <figure class="flex flex-wrap h-full w-full rounded-xl">
+                    <img src="https://source.unsplash.com/qa74Yh6-xlc" alt="Photo" class="rounded-xl">
+                </figure>
+                <!-- /.flex flex-wrap -->
+            </div>
+            <!-- /.image-wrap -->
+        </div>
+        <!-- /.grid grid-cols-2 -->
     </section> 
 </Layout>
 <style lang="scss">
 	@use '../../styles/mixin.scss' as *;
+    .font-primary {
+        font-family: 'DM Serif Text', serif;
+    }
 
+    .font-body {
+
+    }
     .font-title {
-        font-size:15vw;
+        font-size:rem(72);
     }
 
     :root {
@@ -45,9 +95,17 @@ import { Icon } from 'astro-icon';
         }
     }
 
+    .image-wrap {
+        min-height:100vh;
+        figure {
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
     .button-container {
         a {
-            font-size:rem(12);
         }
     }
 
