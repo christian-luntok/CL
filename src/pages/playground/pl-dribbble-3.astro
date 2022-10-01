@@ -1,0 +1,106 @@
+---
+import Layout from '@layouts/PlaygroundLayout.astro';
+import { Icon } from 'astro-icon';
+---
+
+<Layout title="CL - Playground Dribble #2" font_href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" description="A Playground for making dribbble designs to an actual webpage. This is Playground Dribble #2.">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <section class="playground-wrap bg-[#efede9] color-[color:var(--color-body)] overflow-hidden">
+ 
+    </section> 
+</Layout>
+<style lang="scss">
+	@use '../../styles/mixin.scss' as *;
+
+    .font-title {
+        font-size:15vw;
+    }
+
+    :root {
+        --color-primary: #212121;
+        --color-secondary: #fcf0e4;
+        --color-body: #212121;
+        --color-yellow: #f7d316;
+    }
+    a {
+        font-weight:600;
+    }
+    .playground-wrap {
+        min-height:100vh;
+    }
+    .content {
+        p {
+            &:not(:last-child) {
+                margin-bottom:rem(16);
+            }
+        }
+    }
+
+    nav {
+        &.menu {
+            font-size:rem(12);
+        }
+    }
+
+    .button-container {
+        a {
+            font-size:rem(12);
+        }
+    }
+
+    .tiles {
+        .tile-item {
+            border: 2px solid var(--color-primary);
+            border-top:0;
+            border-left:0;
+            border-right:0;
+            @screen md {
+                &:nth-child(odd) {
+                    border-right: 2px solid var(--color-primary);
+                }
+            }
+            @screen lg {
+                border-top:0;
+                border-left:0;
+                border-right: 2px solid var(--color-primary);
+            }
+            &:last-child {
+                @screen md {
+                    border-right:0;
+                }
+            }
+        }
+        .link {
+            text-transform: uppercase;
+            a {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .wrapper {
+        max-width: 1350px;
+        width:100%;
+        margin:0 auto;
+        padding: 0 rem(32);
+    }
+
+    .title {
+        .title-container {
+            h1 {
+                font-size:14vw;
+                transform:scaleY(1.75);
+                @screen lg {
+                    font-size:15vw;
+                }
+                @screen xl {
+                    font-size: rem(208);
+                }
+            }
+        }
+    }
+
+</style>
