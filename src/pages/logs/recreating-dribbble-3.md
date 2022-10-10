@@ -14,7 +14,7 @@ No. 3 of this series of where I recreate dribbble designs.
 
 Found this pretty sick design yesterday and thought thats going to be part 3 of this series! 
 
-Found a pretty close image on unsplash and the closest looking font on Google Font.
+Found a pretty close image on [Unsplash](https://unsplash.com/) and the closest looking font on Google Font.
 
 ### Here's the original [#](https://dribbble.com/shots/19527801-woltex)
 
