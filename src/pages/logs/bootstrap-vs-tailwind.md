@@ -1,15 +1,12 @@
 ---
 layout: ../../layouts/PostLayout.astro
-title: Bootstrap vs Tailwind CSS
+title: Bootstrap vs Tailwind CSS - Which one to pick?
 date: 8 Nov 2022
 compareDate: 8/11/2022
 description: Bootstrap or Tailwind. What to choose?
 category: logs
 tags: Log
 ---
-
-### Bootstrap or Tailwind CSS - Which one to pick?
-
 #### Bootstrap
 
 Bootstrap is a *Component-based Framework* - designed to help developers pull up a quick generic website, it comes with sets of *pre-built components*, along with some utilities such as *spacings, margins, sizings, etc.*
