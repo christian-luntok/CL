@@ -2,27 +2,27 @@
 import { Icon } from 'astro-icon';
 const { linkedin_link, github_link } = Astro.props as Props;
 ---
-<footer class="text-grey dark:text-grey-200 transition duration-300 flex flex-col section-wrapper justify-center px-8 pt-8 pb-16 sm:px-3">
+<footer class="text-primaryGrey-200 dark:text-grey-200 transition duration-300 flex flex-col section-wrapper justify-center px-8 pt-8 pb-16 sm:px-3">
     <hr class="w-full border-1 border-grey-200/30 dark:border-grey-200/3 mb-8">
     <div class="footer-container grid grid-cols-2 gap-4 sm:grid-cols-3 text-grey dark:text-grey-200">
         <div class="footer-links flex flex-col space-y-4 ">
-            <a class="font-semibold text-grey dark:text-grey-200 dark:hover:text-white " href="/">home</a>
-            <a class="font-semibold text-grey dark:text-grey-200 dark:hover:text-white " href="/logs">logs</a>
-            <a class="font-semibold text-grey dark:text-grey-200 dark:hover:text-white " href="/playground">playground</a>
+            <a class="font-semibold text-primaryGrey-200 dark:text-grey-200 dark:hover:text-white " href="/">home</a>
+            <a class="font-semibold text-primaryGrey-200 dark:text-grey-200 dark:hover:text-white " href="/logs">logs</a>
+            <a class="font-semibold text-primaryGrey-200 dark:text-grey-200 dark:hover:text-white " href="/playground">playground</a>
         </div>
         <!-- /.footer-links -->
         <div class="flex flex-col space-y-4">
-            <div class="metric-card border border-grey-200 dark:border-gray-800 rounded-md p-3 max-w-72 w-full text-grey dark:text-grey-200">
+            <div class="metric-card border border-grey-200 dark:border-gray-800 rounded-md p-3 max-w-72 w-full text-primaryGrey-200 dark:text-grey-200">
                 <span class="text-xs block mb-2">All-Time Views</span>
                 <span id="visit-counts" class="h-4 text-sm block"></span>
             </div>
         </div>
         <!-- /.flex flex-col space-y-4 -->
         <div class="button-wrapper flex flex-wrap justify-start sm:justify-end">
-            <a target="_blank" href={github_link} aria-label="Github" class="text-grey dark:text-grey-200 w-9 h-9 rounded-md bg-grey-100/30 hover:bg-grey-100 dark:bg-grey-600 flex items-center justify-center hover:ring-2 dark:hover:bg-grey-200/30 ring-grey dark:ring-grey-100 dark:hover:ring-grey-200/80 transition-all duration-300 ease-in-out">
+            <a target="_blank" href={github_link} aria-label="Github" class="text-grey dark:text-grey-200 w-9 h-9 rounded-md bg-grey-300 hover:bg-grey-100 dark:bg-grey-600 flex items-center justify-center hover:ring-2 dark:hover:bg-grey-200/30 ring-grey dark:ring-grey-100 dark:hover:ring-grey-200/80 transition-all duration-300 ease-in-out">
                 <Icon name="fe:github-alt" class="w-6 h-6 fill-grey dark:fill-grey-200" />
             </a>
-            <a target="_blank" href={linkedin_link} aria-label="LinkedIn" class="text-grey dark:text-grey-200 w-9 h-9 rounded-md bg-grey-100/30 hover:bg-grey-100 dark:bg-grey-600 flex items-center justify-center hover:ring-2 dark:hover:bg-grey-200/30 ring-grey dark:ring-grey-100 dark:hover:ring-grey-200/80 transition-all duration-300 ease-in-out ml-2">
+            <a target="_blank" href={linkedin_link} aria-label="LinkedIn" class="text-grey dark:text-grey-200 w-9 h-9 rounded-md bg-grey-300 hover:bg-grey-100 dark:bg-grey-600 flex items-center justify-center hover:ring-2 dark:hover:bg-grey-200/30 ring-grey dark:ring-grey-100 dark:hover:ring-grey-200/80 transition-all duration-300 ease-in-out ml-2">
                 <Icon name="ri:linkedin-fill" class="w-6 h-6 fill-grey dark:fill-grey-200" />
             </a>
         </div>

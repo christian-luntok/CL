@@ -2,6 +2,7 @@
 import Layout from '@layouts/MainLayout.astro';
 import PostTitle from '@partials/PostTitle.astro';
 import TagsList from '@partials/TagsList.astro';
+import LinkButton from '@partials/LinkButton.astro';
 
 const { readingTime } = Astro.props.frontmatter;  
 const { frontmatter } = Astro.props;
@@ -15,15 +16,18 @@ const tags = frontmatter.tags.split(', ');
         <TagsList tags={tags} />
         <PostTitle title={frontmatter.title}/>
         <div class="log-details mb-8">
-            <span class="inline-block text-sm text-grey dark:text-white">{frontmatter.date}</span> 
-            <span class="mx-2 text-grey dark:text-white">•</span>
-            <span id="time-container" class="inline-block text-sm text-grey dark:text-white">{readingTime}</span>
+            <span class="inline-block text-sm text-white dark:text-white">{frontmatter.date}</span> 
+            <span class="mx-2 text-white dark:text-white">•</span>
+            <span id="time-container" class="inline-block text-sm text-white dark:text-white">{readingTime}</span>
         </div>
         <!-- /.log-details -->
 
-        <div class="content text-grey dark:text-white">
+        <div class="content text-primaryGrey-200 dark:text-white">
             <slot />
         </div>
         <!-- /.content -->
+        <LinkButton href="/">
+            Back to home
+        </LinkButton>
     </article>
 </Layout>

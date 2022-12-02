@@ -6,9 +6,9 @@ import GetLogs from '@components/GetLogs.astro';
 
 ---
 
-<Layout title="Christian Luntok" description="Welcome to this little corner of the web where I share my thoughts and logs within the web developent space. I hope you find some of them interesting. If so, I'd love to hear from you! Drop an email to hey@cjluntok.com.">
-	<Title title="Christian Luntok" />
-	<div class="latest-logs text-grey dark:text-white flex flex-col section-wrapper justify-center px-8 py-8 sm:px-3">
+<Layout title="👋 Hey, It's me Christian Luntok" description="Welcome to this little corner of the web where I share my thoughts and logs within the web developent space. I hope you find some of them interesting. If so, I'd love to hear from you! Drop an email to hey@cjluntok.com.">
+	<Title title="Exploring technologies to create reliable, creative and effective digital expriences." />
+	<div class="latest-logs text-primaryGrey-200 dark:text-white flex flex-col section-wrapper justify-center px-8 py-8 sm:px-3">
 		<h2 class="text-xl mb-8">Latest Posts</h2>
 		<div class="logs">
 			<GetLogs category=""/>
@@ -22,7 +22,7 @@ import GetLogs from '@components/GetLogs.astro';
 	@use '../styles/mixin.scss' as *;
 	h1 {
 		&.name-title {
-			font-size:rem(16);
+			font-size:rem(24);
 		}
 	}
 
@@ -30,6 +30,23 @@ import GetLogs from '@components/GetLogs.astro';
 		max-width: rem(900);
 	}
 
+	.title-section {
+		max-width: rem(580);
+	}
+
+	.content-section {
+		color: var(--offColor-text);
+		p {
+			margin-bottom: rem(32);
+			&:last-child {
+				margin-bottom:0;
+			}
+		}
+		a {
+			color: var(--offColor-text);
+			text-decoration: underline;
+		}
+	}
 	.logs {
 		.log-item {
 		}

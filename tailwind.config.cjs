@@ -4,9 +4,9 @@ module.exports = {
 	theme: {
 		extend: {},
 		fontFamily: {
-			'title': ['Lato', 'sans-serif'],
+			'title': ['Inter', 'sans-serif'],
 			'display': ['freight-display-pro'],
-			'body': ['Lato', 'sans-serif']
+			'body': ['Inter', 'sans-serif']
 		},
 		colors: {
 			'white': '#FFFFFF',
@@ -22,7 +22,19 @@ module.exports = {
 				"700": "#191A1A",
 				"800": "#0F0F10",
 				"900": "#070808"
-			}
+			},"primaryGrey": {
+				DEFAULT: '#111111',
+				"50": "#E8E8E8",
+				"100": "#CFCFCF",
+				"200": "#888888",
+				"300": "#707070",
+				"400": "#404040",
+				"500": "#111111",
+				"600": "#0D0D0D",
+				"700": "#0A0A0A",
+				"800": "#080808",
+				"900": "#030303"
+			  }
 		},
 	},
 	plugins: [],

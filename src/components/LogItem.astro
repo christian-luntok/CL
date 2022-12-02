@@ -9,11 +9,11 @@ export interface Props {
 const { title, date, linkUrl, tags } = Astro.props as Props;
 ---
 
-<a href={linkUrl} class="log-item block mb-4 text-grey dark:text-white l">
+<a href={linkUrl} class="log-item block mb-4 text-primaryGrey-200 ">
     <div class="py-6 px-6 rounded-md border border-grey-200 ring-grey hover:bg-grey-200/10">
         <div class="log-details flex items-center mb-1">
             <span class="block text-xs">{date}</span>
-            <span class="ml-auto text-white dark:text-white block text-xs p-1 px-3 rounded-sm w-auto bg-[#d82456]">{tags}</span>
+            <span class="ml-auto text-white  block text-xs p-1 px-3 rounded-sm w-auto bg-[#d82456]">{tags}</span>
         </div>
         <h3 class="log-title text-lg">{title}</h3>
     </div>
