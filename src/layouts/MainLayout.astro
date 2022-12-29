@@ -35,7 +35,7 @@ const { title, cannonical, description } = Astro.props as Props;
 			<span>Skip to Content</span>
 		</a>
 		
-		<main id="main" class="m-auto mx-0 my-24">
+		<main id="main" class="m-auto mx-0 my-12">
 			<slot />
 			<Footer 
 				github_link="https://github.com/christian-luntok"
@@ -108,6 +108,7 @@ const { title, cannonical, description } = Astro.props as Props;
 		line-height:2;
 		height:100%;
 		min-height: 100vh;
+		overflow-x:hidden;
 	}
 
 	main {
@@ -188,6 +189,9 @@ const { title, cannonical, description } = Astro.props as Props;
 				font-weight:700;
 			}
         }
+		pre {
+			margin:rem(16) 0;
+		}
 		img {
 			border-radius: rem(8);
 			max-width:100%;
