@@ -8,14 +8,52 @@ import GetLogs from '@components/GetLogs.astro';
 
 <Layout title="👋 Hey, It's me Christian Luntok" description="Welcome to this little corner of the web where I share my thoughts and logs within the web developent space. I hope you find some of them interesting. If so, I'd love to hear from you! Drop an email to hey@cjluntok.com.">
 	<Title title="Exploring technologies to create reliable, creative and effective digital experiences." />
-	<div class="latest-logs text-primaryGrey-100 dark:text-white flex flex-col section-wrapper justify-center px-8 py-8 sm:px-3">
-		<h2 class="text-xl mb-8 text-white">Latest Posts</h2>
-		<div class="logs">
-			<GetLogs category=""/>
+	<div class="tabs-section section-wrapper px-8 py-8 sm:px-3 text-primaryGrey-100">
+		<input type="radio" id="all" name="tabs" checked />
+		<label class="tab px-2 md:px-4 py-1 md:mr-2 rounded-sm" for="all">All</label>
+		<input type="radio" id="logs" name="tabs" />
+		<label class="tab px-2 md:px-4 py-1 md:mr-2 rounded-sm" for="logs">Logs</label>
+		<input type="radio" id="playground" name="tabs" />
+		<label class="tab px-2 md:px-4 py-1 md:mr-2 rounded-sm" for="playground">Playground</label>
+		<input type="radio" id="resources" name="tabs" />
+		<label class="tab px-2 md:px-4 py-1 md:mr-2 rounded-sm" for="resources">Resources <span class="notification text-sm bg-[#F1F5F9] text-[#475569] ml-2 px-3 py-1 rounded-full">new</span></label>
+		<div class="latest-logs tabs-content-section text-primaryGrey-100 dark:text-white flex flex-col justify-center py-8">
+			<div class="all tab-content">
+				<h2 class="text-xl mb-8 text-white">Latest Posts</h2>
+				<div class="logs">
+					<GetLogs category=""/>
+				</div>
+				<!-- /.logs -->
+			</div>
+			<!-- /.all -->
+			<div class="logs tab-content">
+				<h2 class="text-xl mb-8 text-white">Latest Logs</h2>
+				<div class="logs">
+					<GetLogs category="logs"/>
+				</div>
+				<!-- /.logs -->
+			</div>
+			<!-- /.logs -->
+			<div class="playground tab-content">
+				<h2 class="text-xl mb-8 text-white">Latest Playground</h2>
+				<div class="logs">
+					<GetLogs category="playground"/>
+				</div>
+				<!-- /.playground -->
+			</div>
+			<!-- /.logs -->
+			<div class="resources tab-content">
+				<h2 class="text-xl mb-8 text-white">Latest Resources</h2>
+				<div class="logs">
+					<GetLogs category="resource"/>
+				</div>
+				<!-- /.logs -->
+			</div>
+			<!-- /.logs -->
 		</div>
-		<!-- /.logs -->
+		<!-- /.latest-logs -->
 	</div>
-	<!-- /.latest-logs -->
+
 </Layout>
 
 <style lang="scss" is:global>
@@ -23,6 +61,80 @@ import GetLogs from '@components/GetLogs.astro';
 	h1 {
 		&.name-title {
 			font-size:rem(24);
+		}
+	}
+
+	// Tabs
+	.tabs-section {
+		* {
+			z-index:2;
+		}
+
+		@screen md {
+		}
+		.tab {
+			display:inline-flex;
+			justify-content: center;
+			align-items: center;
+			// width: rem(175);
+			cursor:pointer;
+			// &:nth-child(2n) {
+			// 	padding-left:0;
+			// }
+		}
+		.notification {
+			display:flex;
+			align-items: center;
+			justify-content: center;
+		}
+		input[type="radio"] {
+			display: none;
+			&:checked {
+				& + label {
+					color: var(--bg-primary);
+					background: var(--brand-color-1);
+					& > .notification {
+						background-color: var(--bg-primary);
+						color: var(--brand-color-1);
+					}
+				}
+			}
+		}
+		.tabs-content-section {
+			.tab-content {
+				display:none;
+			}
+		}
+
+		> input[id="logs"] {
+			&:checked {
+				~ .tabs-content-section > .logs.tab-content {
+					display:block;
+				}
+			}
+		}
+		> input[id="all"] {
+			&:checked {
+				~ .tabs-content-section > .all.tab-content {
+					display:block;
+				}
+			}
+		}
+
+		input[id="playground"] {
+			&:checked {
+				~ .tabs-content-section > .playground.tab-content {
+					display:block;
+				}
+			}
+		}
+
+		input[id="resources"] {
+			&:checked {
+				~ .tabs-content-section > .resources.tab-content {
+					display:block;
+				}
+			}
 		}
 	}
 
